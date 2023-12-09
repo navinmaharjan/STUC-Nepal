@@ -53,7 +53,7 @@ const Banner = () => {
         }}
       >
         <SwiperSlide>
-          <div className="relative w-full h-[400px] border-8 border-white">
+          <div className="relative w-full h-[480px] border-8 border-white">
             <img
               src={BannerImage1}
               alt=""
@@ -62,7 +62,7 @@ const Banner = () => {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="relative w-full h-[400px] border-8 border-white">
+          <div className="relative w-full h-[480px] border-8 border-white">
             <img
               src={BannerImage2}
               alt=""
@@ -71,7 +71,7 @@ const Banner = () => {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="relative w-full h-[400px] border-8 border-white">
+          <div className="relative w-full h-[480px] border-8 border-white">
             <img
               src={BannerImage3}
               alt=""

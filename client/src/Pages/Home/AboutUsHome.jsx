@@ -5,8 +5,8 @@ const AboutUsHome = () => {
     <>
       <div className="bg-offWhite">
         <div className="container mx-auto">
-          <div className="flex items-center py-8 mx-40">
-            <div className="w-2/3 p-4 flex flex-col">
+          <div className="flex items-center py-10 gap-4  mx-40">
+            <div className="w-2/3 flex flex-col">
               <div>
                 <h3 className="text-2xl border-b font-light">About Us</h3>
               </div>
@@ -25,12 +25,12 @@ const AboutUsHome = () => {
                 </p>
               </div>
               <div>
-                <button className="bg-redbrand py-2 px-4 text-sm font-light text-white mt-2">
+                <button className="bg-redbrand py-2 px-4 text-sm font-light text-white mt-2 hover:opacity-80">
                   Read More
                 </button>
               </div>
             </div>
-            <div className="w-1/3 relative h-60">
+            <div className="w-1/3 relative h-60 shadow-2xl border-8 border-white">
               <img
                 src={AboutUsImage}
                 alt=""
