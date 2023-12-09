@@ -3,7 +3,7 @@ import React from "react";
 const Button = () => {
   return (
     <div>
-      <button className="bg-redbrand py-1 px-2 text-sm font-light text-white mt-2 hover:opacity-80">
+      <button className="bg-bluebrand py-2 px-3 text-sm font-medium text-white mt-2 hover:opacity-80">
         Read More
       </button>
     </div>

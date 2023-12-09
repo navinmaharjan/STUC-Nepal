@@ -10,12 +10,12 @@ const News_Issue = () => {
           {/* --------- News Section --------- */}
           <div className="w-3/4 flex flex-col border shadow-2xl bg-offWhite">
             <div>
-              <h3 className="text-2xl font-light border-b bg-bluebrand text-white px-4 py-2">
+              <h3 className="text-2xl font-light border-b bg-darkblue text-white px-4 py-2">
                 News Events
               </h3>
             </div>
             {NewsData.map((item) => (
-              <div className="flex gap-4 p-2 border-b ">
+              <div className="flex gap-4 p-2 border-b" key={item.id}>
                 <div className="relative w-1/2 h-60">
                   <img
                     src={item.newsImage}
@@ -36,12 +36,12 @@ const News_Issue = () => {
           {/* --------- Issue Section --------- */}
           <div className="w-1/4 flex flex-col border shadow-2xl bg-offWhite">
             <div>
-              <h3 className="text-2xl font-light border-b bg-bluebrand text-white px-4 py-2">
+              <h3 className="text-2xl font-light border-b bg-darkblue text-white px-4 py-2">
                 Issue / Campaigns
               </h3>
             </div>
             {IssueData.map((item) => (
-              <div className="flex gap-4 p-2">
+              <div className="flex gap-4 p-2" key={item.id}>
                 {/* <div className="relative w-1/2 h-60">
                   <img
                     src={item.newsImage}
