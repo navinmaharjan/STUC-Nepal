@@ -1,6 +1,9 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import Logo from "../assets/logo.jpeg";
 const Header = () => {
+  const [aboutUs, setAboutUs] = useState(false);
+  const [gallery, setGallery] = useState(false);
   return (
     <>
       <div className="bg-darkblue">
@@ -29,26 +32,80 @@ const Header = () => {
             </h1>
             <h1 className="uppercase text-2xl tracking-wider font-medium text-blue-900 text-left">
               समाजवादी ट्रेड युनियन महासंघ, नेपाल (केन्द्रीय समिति)
-             
             </h1>
           </div>
         </div>
       </div>
-      <div className="">
-        <ul className="flex justify-center bg-darkblue gap-8 py-4 text-white">
+      <div className="sticky top-0 left-0 z-10 shadow-2xl">
+        <ul className="flex justify-center bg-darkblue gap-8 text-white ">
           <Link to="/">
-            <li className="tracking-wide font-medium" >Home</li>
+            <li className="tracking-wide font-medium py-4">Home</li>
           </Link>
-          <li className="tracking-wider font-medium">About Us</li>
-          <li className="tracking-wider font-medium">News/Events</li>
-          <li className="tracking-wider font-medium">Issue/Campaigns</li>
-          <li className="tracking-wider font-medium">Publications</li>
+          <li
+            className="tracking-wider font-medium relative py-4"
+            onMouseEnter={() => setAboutUs(true)}
+            onMouseLeave={() => setAboutUs(false)}
+          >
+            About Us
+            {aboutUs && (
+              <div
+                className={`absolute top-[56px] left-0 bg-white w-[200px] shadow-2xl`}
+              >
+                <ul className="text-slate-900">
+                  <Link to="/introduction">
+                    <li className="py-2 px-4 text-slate-700 hover:bg-offWhite">
+                      Introduction
+                    </li>
+                  </Link>
+                  <Link to="/history">
+                    <li className="py-2 px-4 text-slate-700 hover:bg-offWhite">
+                      History
+                    </li>
+                  </Link>
+                  <Link to="/board-of-directors">
+                    <li className="py-2 px-4 text-slate-700 hover:bg-offWhite">
+                      Board of Directors
+                    </li>
+                  </Link>
+                </ul>
+              </div>
+            )}
+          </li>
+          <Link to="/news-events"><li className="tracking-wider font-medium  py-4">News/Events</li></Link>
+          <Link to="/issue-campaigns"><li className="tracking-wider font-medium  py-4">Issue/Campaigns</li></Link>
+          <Link to="/publications"><li className="tracking-wider font-medium  py-4">Publications</li></Link>
           <Link to="/member-form">
-            <li className="tracking-wider font-medium">Membership Form</li>
+            <li className="tracking-wider font-medium  py-4">
+              Membership Form
+            </li>
           </Link>
-          <li className="tracking-wider font-medium">Gallery</li>
-          <li className="tracking-wider font-medium">Download</li>
-          <li className="tracking-wider font-medium">Contact Us</li>
+          <li
+            className="tracking-wider font-medium  py-4 relative"
+            onMouseEnter={() => setGallery(true)}
+            onMouseLeave={() => setGallery(false)}
+          >
+            Gallery
+            {gallery && (
+              <div
+                className={`absolute top-[56px] left-0 bg-white w-[150px] shadow-2xl`}
+              >
+                <ul className="text-slate-900">
+                  <Link to="/image-gallery">
+                    <li className="py-2 px-4 text-slate-700 hover:bg-offWhite">
+                      Image Gallery
+                    </li>
+                  </Link>
+                  <Link to="/video-gallery">
+                    <li className="py-2 px-4 text-slate-700 hover:bg-offWhite">
+                      Video Gallery
+                    </li>
+                  </Link>
+                </ul>
+              </div>
+            )}
+          </li>
+          <Link to="/download"><li className="tracking-wider font-medium  py-4">Download</li></Link>
+          <Link to="/contact-us"><li className="tracking-wider font-medium  py-4">Contact Us</li></Link>
         </ul>
       </div>
     </>

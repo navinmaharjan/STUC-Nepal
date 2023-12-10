@@ -94,7 +94,7 @@ const MemberForm = () => {
               <Input placeholder="Ward" />
             </FormControl>
 
-            <div className="bg-offWhite py-2 mb-4 pl-2">
+            <div className="py-2 mb-4 pl-2">
               <FormControl isRequired className="pb-4">
                 <FormLabel>Father's Name(बुवाको नाम)</FormLabel>
                 <Input placeholder="Father's Name" />
