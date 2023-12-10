@@ -14,7 +14,7 @@ const News_Issue = () => {
                 News Events
               </h3>
             </div>
-            {NewsData.map((item) => (
+            {NewsData.slice(0,2).map((item) => (
               <div className="flex gap-4 p-2 border-b" key={item.id}>
                 <div className="relative w-1/2 h-60">
                   <img
@@ -40,15 +40,8 @@ const News_Issue = () => {
                 Issue / Campaigns
               </h3>
             </div>
-            {IssueData.map((item) => (
+            {IssueData.slice(0,2).map((item) => (
               <div className="flex gap-4 p-2" key={item.id}>
-                {/* <div className="relative w-1/2 h-60">
-                  <img
-                    src={item.newsImage}
-                    alt=""
-                    className="absolute w-full h-full object-cover"
-                  />
-                </div> */}
                 <div className="flex flex-col p-4">
                   <h1 className="text-lg">{item.newsHeadline}</h1>
                   <p className="text-sm">{item.newsPublishedDate}</p>
