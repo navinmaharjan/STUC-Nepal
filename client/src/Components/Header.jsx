@@ -49,17 +49,17 @@ const Header = () => {
             About Us
             {aboutUs && (
               <div
-                className={`absolute top-[56px] left-0 bg-white w-[200px] shadow-2xl`}
+                className={`absolute top-[56px] left-0 bg-white w-[250px] shadow-2xl`}
               >
                 <ul className="text-slate-900">
-                  <Link to="/introduction">
+                  <Link to="/history">
                     <li className="py-2 px-4 text-slate-700 hover:bg-offWhite">
-                      Introduction
+                      History
                     </li>
                   </Link>
                   <Link to="/history">
                     <li className="py-2 px-4 text-slate-700 hover:bg-offWhite">
-                      History
+                      Associate Organization
                     </li>
                   </Link>
                   <Link to="/board-of-directors">
