@@ -5,7 +5,6 @@ import Home from "./Pages/Home/Home";
 import MemberForm from "./Pages/MemberForm/MemberForm";
 import ImageGallery from "./Pages/Gallery/ImageGallery";
 import VideoGallery from "./Pages/Gallery/VideoGallery";
-import Introduction from "./Pages/AboutUs/Introduction";
 import History from "./Pages/AboutUs/History";
 import BoardDirectors from "./Pages/AboutUs/BoardDirectors";
 import News from "./Pages/News/News";
@@ -13,6 +12,7 @@ import Issue from "./Pages/Issue/Issue";
 import Publications from "./Pages/Publications/Publications";
 import Download from "./Pages/Download/Download";
 import Contact from "./Pages/ContactUs/Contact";
+import Associate from "./Pages/AboutUs/Associate";
 
 const App = () => {
   return (
@@ -20,7 +20,7 @@ const App = () => {
    <Header />
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/introduction" element={<Introduction />} />
+      <Route path="/associate-organization" element={<Associate />} />
       <Route path="/history" element={<History />} />
       <Route path="/board-of-directors" element={<BoardDirectors />} />
       <Route path="/news-events" element={<News />} />

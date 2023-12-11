@@ -57,7 +57,7 @@ const Header = () => {
                       History
                     </li>
                   </Link>
-                  <Link to="/history">
+                  <Link to="/associate-organization">
                     <li className="py-2 px-4 text-slate-700 hover:bg-offWhite">
                       Associate Organization
                     </li>
