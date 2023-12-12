@@ -1,6 +1,16 @@
 import ModalImage from "react-modal-image";
-import ImageData from "../../Data/ImageData"
+import ImageData from "../../Data/ImageData";
+import { Link } from 'react-router-dom'
+
 const Introduction = () => {
+  const uniqueAlbumTypes = [];
+  const filteredPhotos = ImageData.filter((photo) => {
+    if (!uniqueAlbumTypes.includes(photo.galleryAlbumName)) {
+      uniqueAlbumTypes.push(photo.galleryAlbumName);
+      return true;
+    }
+    return false;
+  });
   return (
     <>
       <div className="bg-blue-700">
@@ -14,21 +24,29 @@ const Introduction = () => {
           </div>
         </div>
       </div>
-      <div className="container mx-auto py-16 flex flex-wrap gap-4 ">
-      {ImageData.map((item) => (
-            <div className="">
-              <div className="relative w-[360px] sm:w-[23rem] h-72 overflow-hidden" key={item.id} >
-                <ModalImage
-                  small={item.galleryImage}
-                  large={item.galleryImage}
-                  hideDownload={true}
-                  className="absolute w-full h-full object-cover hover:scale-105 transition-all duration-300"
-                />
+      <div className="container mx-auto py-16 grid grid-cols-4 gap-8 ">
+        {filteredPhotos.reverse().map((item) => (
+          <Link key={item.id} to={`/image-detail/${item.galleryAlbumName}`}>
+            <div className="p-2 border flex flex-col">
+              <div className="relative w-full h-60">
+                <div className=" absolute w-full h-full">
+                  <img
+                    src={item.gallerythumbnail}
+                    alt=""
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+              <div className="flex flex-col text-center text-gray-600">
+                <p className="text-2xl font-medium border-b border-orange">
+                  {item.galleryDate}
+                </p>
+                <p className="text-2xl font-medium">{item.galleryAlbumName}</p>
               </div>
             </div>
-          ))}
+          </Link>
+        ))}
       </div>
-     
     </>
   );
 };

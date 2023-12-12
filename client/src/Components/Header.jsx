@@ -54,7 +54,7 @@ const Header = () => {
                 <ul className="text-slate-900">
                   <Link to="/history">
                     <li className="py-2 px-4 text-slate-700 hover:bg-offWhite">
-                      History
+                      Inroduction
                     </li>
                   </Link>
                   <Link to="/associate-organization">
@@ -69,6 +69,16 @@ const Header = () => {
                   </Link>
                   <Link to="#">
                     <li className="py-2 px-4 text-slate-700 hover:bg-offWhite">
+                      Message from Chairman
+                    </li>
+                  </Link>
+                  <Link to="#">
+                    <li className="py-2 px-4 text-slate-700 hover:bg-offWhite">
+                    Message from Secretary
+                    </li>
+                  </Link>
+                  <Link to="#">
+                    <li className="py-2 px-4 text-slate-700 hover:bg-offWhite">
                       Bidhan in Nepali
                     </li>
                   </Link>
@@ -77,7 +87,6 @@ const Header = () => {
                       Bidhan in English
                     </li>
                   </Link>
-                  
                 </ul>
               </div>
             )}

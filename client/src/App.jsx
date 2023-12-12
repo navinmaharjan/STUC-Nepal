@@ -13,6 +13,8 @@ import Publications from "./Pages/Publications/Publications";
 import Download from "./Pages/Download/Download";
 import Contact from "./Pages/ContactUs/Contact";
 import Associate from "./Pages/AboutUs/Associate";
+import ImageDetail from "./Pages/Gallery/ImageDetail";
+import VideoDetail from "./Pages/Gallery/VideoDetail";
 
 const App = () => {
   return (
@@ -28,7 +30,9 @@ const App = () => {
       <Route path="/publications" element={<Publications />} />
       <Route path="/member-form" element={<MemberForm />} />
       <Route path="/image-gallery" element={<ImageGallery />} />
+      <Route path='/image-detail/:id' element={<ImageDetail />} />
       <Route path="/video-gallery" element={<VideoGallery />} />
+      <Route path="/video-detail/:id" element={<VideoDetail />} />
       <Route path="/download" element={<Download />} />
       <Route path="/contact-us" element={<Contact />} />
     </Routes>

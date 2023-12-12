@@ -13,11 +13,11 @@ const Introduction = () => {
           </div>
         </div>
       </div>
-      <div className="container mx-auto py-16 flex flex-wrap gap-4 ">
+      <div className="container mx-auto py-16 grid grid-cols-4 gap-4 ">
         {videoGalleryData.map((item) => (
           <div className="" key={item.id}>
             <div className="relative w-[360px] sm:w-[23rem] h-72 overflow-hidden">
-              <video src={item.videoDetail} controls></video>
+              <img src={item.videoThumbnail}></img>
             </div>
           </div>
         ))}
