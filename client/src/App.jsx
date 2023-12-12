@@ -15,6 +15,9 @@ import Contact from "./Pages/ContactUs/Contact";
 import Associate from "./Pages/AboutUs/Associate";
 import ImageDetail from "./Pages/Gallery/ImageDetail";
 import VideoDetail from "./Pages/Gallery/VideoDetail";
+import Bidhan from "./Pages/AboutUs/Bidhan";
+import ChairmanMessage from "./Pages/AboutUs/ChairmanMessage";
+import SecretaryMessage from "./Pages/AboutUs/SecretaryMessage";
 
 const App = () => {
   return (
@@ -35,6 +38,9 @@ const App = () => {
       <Route path="/video-detail/:id" element={<VideoDetail />} />
       <Route path="/download" element={<Download />} />
       <Route path="/contact-us" element={<Contact />} />
+      <Route path="/bidhan" element={<Bidhan />} />
+      <Route path="/message-from-chairman" element={<ChairmanMessage />} />
+      <Route path="/message-from-secretary" element={<SecretaryMessage />} />
     </Routes>
     <Footer />
    </BrowserRouter>

@@ -67,26 +67,22 @@ const Header = () => {
                       Board of Directors
                     </li>
                   </Link>
-                  <Link to="#">
+                  <Link to="message-from-chairman">
                     <li className="py-2 px-4 text-slate-700 hover:bg-offWhite">
                       Message from Chairman
                     </li>
                   </Link>
-                  <Link to="#">
+                  <Link to="message-from-secretary">
                     <li className="py-2 px-4 text-slate-700 hover:bg-offWhite">
                     Message from Secretary
                     </li>
                   </Link>
-                  <Link to="#">
+                  <Link to="bidhan">
                     <li className="py-2 px-4 text-slate-700 hover:bg-offWhite">
-                      Bidhan in Nepali
+                      Bidhans
                     </li>
                   </Link>
-                  <Link to="#">
-                    <li className="py-2 px-4 text-slate-700 hover:bg-offWhite">
-                      Bidhan in English
-                    </li>
-                  </Link>
+                 
                 </ul>
               </div>
             )}
