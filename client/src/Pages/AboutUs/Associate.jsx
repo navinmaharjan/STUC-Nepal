@@ -15,12 +15,13 @@ const Associate = () => {
         </div>
       </div>
       <div className="bg-offWhite">
-        <div className="container mx-auto py-16 flex flex-wrap gap-4 ">
+       
+        <div className="container mx-auto py-16 grid grid-cols-4 gap-4 ">
           {AssociateData.map((item) => (
-            <div className="flex flex-col border-2 p-4 bg-white">
+            <div className="flex flex-col border-2 p-2 bg-white">
               <div>
                 <div
-                  className="relative w-[360px] sm:w-[20rem] h-72 overflow-hidden"
+                  className="relative w-full h-60 overflow-hidden"
                   key={item.id}
                 >
                   <ModalImage
@@ -31,10 +32,13 @@ const Associate = () => {
                   />
                 </div>
               </div>
-              <p className="font-medium text-xl">
+
+              <p className="text-lg text-center">
+                {item.associatePresidentName}
+              </p>
+              <p className="font-medium text-xl text-center text-redbrand">
                 {item.associateOrganization}
               </p>
-              <p className="text-lg">{item.associatePresidentName}</p>
             </div>
           ))}
         </div>

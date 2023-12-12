@@ -1,6 +1,9 @@
-import React from "react";
+import NewsData from "../../Data/NewsData";
+import IssueData from "../../Data/IssueData";
+import Button from "../../Components/Button";
+import BoardDirectors from "../../Data/BoardDirectors";
 
-const Introduction = () => {
+const History = () => {
   return (
     <>
       <div className="bg-blue-700">
@@ -14,49 +17,92 @@ const Introduction = () => {
           </div>
         </div>
       </div>
-      <div className="bg-offWhite">
-        <div className="container mx-auto py-16">
-          <div className="mx-40">
-            <p>
-              १९९७ साल देखि विभिन्न कालखण्डमा नेपाली जनताले संचालन गरेका राणा
-              विरोधी आन्दोलन, निरंकुश पञ्चायत विरोधी आन्दोलन, राजतन्त्रको अन्त्य
-              तथा राष्ट्रिय स्वाधीनताको पक्षमा भएका शान्तिपूर्ण जनक्रान्ति,
-              जनयुद्ध, मधेश जनविद्रोह, आदीवासी जनजाति, खस, आर्य थारु, महिला,
-              मुस्लिम लगायत उत्पीडित वर्ग समुदायले चलाएको आन्दोलन र बलिदानीपुर्ण
-              संघर्षमा नेपाली श्रमिक वर्गले सक्रिय सहभागिता रहँदै आएको तर
-              जुनसुकै राजनितिक परिवर्तनको आन्दोलनमा श्रमिकहरुलाई सडकमा उतार्ने र
-              आन्दोलन सफल भएपछि श्रमिकका आधारभुत समस्याहरु हल गर्न कुनै पनि
-              राजनैतिक पार्टीहरुले उचित भुमिका खेलेको पाईएन । तसर्थ; देशभक्ति,
-              स्वतन्त्रता, स्वाभिमान, अग्रगामी, संघर्षशील र श्रमशील नेपाली
-              श्रमिकको आधारभुत वर्ग चरित्र हुन भन्ने तथ्यलाई दृष्टिगत गर्दै महान
-              सर्वहारा श्रमिकको न्याय समानता स्वतन्त्रता पहिचान सुशासन समृद्धिको
-              आकाङक्षा पुरा गर्न नेपाली श्रमिकले नेपाली श्रमिककै लागि एउटा पृथक
-              वैकल्पिक विचार उद्देश्य बोकेको ट्रेड युनियन महासंघ निमार्ण गर्न
-              देश भरिका विभिन्न क्षेत्रमा शारीरिक मानसिक रुपमा कृयाशील रहेर
-              आफ्नो जीवन यापनको लागि श्रम गर्ने श्रमजीवी वर्गको सर्वोत्तम हित र
-              समृद्धि नै ट्रेड यूनियन महासंघको लक्ष्य हो भन्ने मान्यतालाई
-              आत्मसात गरि संगठित वा असंगठित क्षेत्रमा रहेका लाखौं श्रमिकहरुलाई
-              महासंघमा आवद्ध गर्दै दलाल आसेपासे पुँजीवादका विरुद्ध नेपाली
-              श्रमजीवी वर्गको आर्थिक तथा सामाजिक रुपान्तरणका लागि राष्ट्रिय
-              पुँजीको विकास गर्दै गाँस बाँस कपास साथै शिक्षा स्वास्थ्य, रोजगारी
-              जस्ता श्रमिकको आधारभुत आवश्यकताहरुको सुनिश्चितताका साथै श्रमजीवी
-              वर्ग माथि गर्ने सबै खाले शोषणको अन्त्य गरि शोषण विहिन समाज
-              निमार्णको उद्देश्यले समावेशी लोकतान्त्रिक ट्रेड युनियन महासंघ
-              नेपाल २०६६ बैशाख ३० गते विधिवत तवरले श्रम विभागमा दर्ता भइ दर्ता
-              नं. १० कायम भएको हो । यस समय देखि निरन्तर रुपमा श्रम वर्गका पेशागत
-              हकहित र उत्थानका लागि कार्यरत भएको र २०७० मा ILO को GEVENAR BODY
-              मा भाग लिएको २०७१।०३।२५ गते ‘‘समावेशी लोकतान्त्रिक ट्रेड युनियन
-              महासंघ नेपाल र राष्ट्रिय प्रजातान्त्रिक ट्रेड युनियन महासंघ,
-              स्वतन्त्र’’ सँग एकीकरण गरी दर्ता नं. १० नै कायम गरि नयाँ नाम
-              राष्ट्रिय लोकतान्त्रिक ट्रेड युनियन महासंघ, स्वतन्त्र भई निरन्तर
-              ILO, सरकार, JTUCC र अन्य संघ, संस्थासँग सहयात्रा गर्दै अगाडी
-              निरन्तर बढिरहेको हुँदा २०७०।११।०६ गते ‘‘राष्ट्रिय लोकतान्त्रिक
-              ट्रेड यूनियन महासंघ–स्वतन्त्र’’ को विषेश महाधिवेशनले प्रथम विधान
-              संशोधन गरी नाम परिवर्तन भई ‘‘समाजवादी ट्रेड युनियन महासंघ, नेपाल’’
-              रहेको छ । र ‘समाजवादी ट्रेड यूनियन महासंघ, नेपाल नामको महासंघको
-              विधान जारि गरिएको छ । अहिले समाजवादी ट्रेड युनियन महासंघ, नेपाल
-              सँग आवद्ध राष्ट्रिय संगठन र संघहरु निम्म प्रकारका रहेका छन् ।
-            </p>
+      <div className="container mx-auto">
+        <div className="flex py-10 gap-4">
+          {/* --------- Issue Section --------- */}
+          <div className="w-3/4 flex flex-col p-4 border shadow-xl bg-offWhite pt-5">
+            <div className="mx-auto">
+              {BoardDirectors.slice(0, 1).map((item) => (
+                <div className="flex flex-col justify-center items-center">
+                  <div className="relative w-40 h-40 rounded-full overflow-hidden">
+                    <img
+                      src={item.boardMemberImage}
+                      alt=""
+                      className="absolute w-full h-full object-cover"
+                    />
+                  </div>
+                  <p className="text-xl font-semibold text-redbrand">
+                    {item.boardDesignation}
+                  </p>
+                  <p className="text-lg font-medium">{item.boardMemberName}</p>
+                </div>
+              ))}
+            </div>
+            <div className="mx-auto flex gap-8 py-8">
+              {BoardDirectors.slice(1, 5).map((item) => (
+                <div className="flex flex-col justify-center items-center">
+                  <div className="relative w-40 h-40 rounded-full overflow-hidden">
+                    <img
+                      src={item.boardMemberImage}
+                      alt=""
+                      className="absolute w-full h-full object-cover"
+                    />
+                  </div>
+                  <p className="text-xl font-semibold text-redbrand">
+                    {item.boardDesignation}
+                  </p>
+                  <p className="text-lg font-medium">{item.boardMemberName}</p>
+                </div>
+              ))}
+            </div>
+            <div className="flex gap-8 py-14 flex-wrap mx-16">
+              {BoardDirectors.slice(5, 36).map((item) => (
+                <div className="flex flex-col justify-center items-center">
+                  <p className="text-xl font-semibold text-redbrand">
+                    {item.boardDesignation}
+                  </p>
+                  <p className="text-lg font-medium">{item.boardMemberName}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* --------- News Section --------- */}
+          <div className="w-1/4 h-[520px] flex flex-col border bg-offWhite">
+            <div>
+              <div>
+                <h3 className="text-2xl font-light border-b bg-darkblue text-white px-4 py-2">
+                  News / Events
+                </h3>
+              </div>
+              {NewsData.slice(0, 2).map((item) => (
+                <div className="flex gap-4 p-2" key={item.id}>
+                  <div className="flex flex-col p-4">
+                    <h1 className="text-lg">{item.newsHeadline}</h1>
+                    <p className="text-sm">{item.newsPublishedDate}</p>
+                    <p className="text-sm text-slate-700">{item.newsDetail}</p>
+                    <Button />
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div className="bg-offWhite border mt-8">
+              <div>
+                <h3 className="text-2xl font-light border-b bg-darkblue text-white px-4 py-2">
+                  Issue / Campaigns
+                </h3>
+              </div>
+              {IssueData.slice(0, 2).map((item) => (
+                <div className="flex gap-4 p-2" key={item.id}>
+                  <div className="flex flex-col p-4">
+                    <h1 className="text-lg">{item.newsHeadline}</h1>
+                    <p className="text-sm">{item.newsPublishedDate}</p>
+                    <p className="text-sm text-slate-700">{item.newsDetail}</p>
+                    <Button />
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
@@ -64,4 +110,4 @@ const Introduction = () => {
   );
 };
 
-export default Introduction;
+export default History;

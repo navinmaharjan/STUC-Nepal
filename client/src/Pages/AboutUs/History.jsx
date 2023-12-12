@@ -1,6 +1,7 @@
-import React from "react";
+import NewsData from "../../Data/NewsData";
+import Button from "../../Components/Button";
 
-const Introduction = () => {
+const History = () => {
   return (
     <>
       <div className="bg-blue-700">
@@ -14,11 +15,11 @@ const Introduction = () => {
           </div>
         </div>
       </div>
-      <div className="bg-offWhite">
-        <div className="container mx-auto py-16">
-          <div className="mx-40">
-            <p>
-              १९९७ साल देखि विभिन्न कालखण्डमा नेपाली जनताले संचालन गरेका राणा
+      <div className="container mx-auto">
+        <div className="flex py-10 gap-4">
+          {/* --------- Issue Section --------- */}
+          <div className="w-3/4 flex p-8 border shadow-xl bg-offWhite">
+          <p className="text-lg">१९९७ साल देखि विभिन्न कालखण्डमा नेपाली जनताले संचालन गरेका राणा
               विरोधी आन्दोलन, निरंकुश पञ्चायत विरोधी आन्दोलन, राजतन्त्रको अन्त्य
               तथा राष्ट्रिय स्वाधीनताको पक्षमा भएका शान्तिपूर्ण जनक्रान्ति,
               जनयुद्ध, मधेश जनविद्रोह, आदीवासी जनजाति, खस, आर्य थारु, महिला,
@@ -45,8 +46,8 @@ const Introduction = () => {
               नेपाल २०६६ बैशाख ३० गते विधिवत तवरले श्रम विभागमा दर्ता भइ दर्ता
               नं. १० कायम भएको हो । यस समय देखि निरन्तर रुपमा श्रम वर्गका पेशागत
               हकहित र उत्थानका लागि कार्यरत भएको र २०७० मा ILO को GEVENAR BODY
-              मा भाग लिएको २०७१।०३।२५ गते ‘‘समावेशी लोकतान्त्रिक ट्रेड युनियन
-              महासंघ नेपाल र राष्ट्रिय प्रजातान्त्रिक ट्रेड युनियन महासंघ,
+              मा भाग लिएको २०७१।०३।२५ गते ‘ <span className="font-semibold">समावेशी लोकतान्त्रिक ट्रेड युनियन
+              महासंघ नेपाल</span>  र राष्ट्रिय प्रजातान्त्रिक ट्रेड युनियन महासंघ,
               स्वतन्त्र’’ सँग एकीकरण गरी दर्ता नं. १० नै कायम गरि नयाँ नाम
               राष्ट्रिय लोकतान्त्रिक ट्रेड युनियन महासंघ, स्वतन्त्र भई निरन्तर
               ILO, सरकार, JTUCC र अन्य संघ, संस्थासँग सहयात्रा गर्दै अगाडी
@@ -55,8 +56,33 @@ const Introduction = () => {
               संशोधन गरी नाम परिवर्तन भई ‘‘समाजवादी ट्रेड युनियन महासंघ, नेपाल’’
               रहेको छ । र ‘समाजवादी ट्रेड यूनियन महासंघ, नेपाल नामको महासंघको
               विधान जारि गरिएको छ । अहिले समाजवादी ट्रेड युनियन महासंघ, नेपाल
-              सँग आवद्ध राष्ट्रिय संगठन र संघहरु निम्म प्रकारका रहेका छन् ।
-            </p>
+              सँग आवद्ध राष्ट्रिय संगठन र संघहरु निम्म प्रकारका रहेका छन् ।</p>
+          </div>
+
+          {/* --------- News Section --------- */}
+          <div className="w-1/4 h-[520px] flex flex-col border shadow-xl bg-offWhite">
+            <div>
+              <h3 className="text-2xl font-light border-b bg-darkblue text-white px-4 py-2">
+                News / Events
+              </h3>
+            </div>
+            {NewsData.slice(0,2).map((item) => (
+              <div className="flex gap-4 p-2" key={item.id}>
+                {/* <div className="relative w-1/2 h-60">
+                  <img
+                    src={item.newsImage}
+                    alt=""
+                    className="absolute w-full h-full object-cover"
+                  />
+                </div> */}
+                <div className="flex flex-col p-4">
+                  <h1 className="text-lg">{item.newsHeadline}</h1>
+                  <p className="text-sm">{item.newsPublishedDate}</p>
+                  <p className="text-sm text-slate-700">{item.newsDetail}</p>
+                  <Button />
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>
@@ -64,4 +90,4 @@ const Introduction = () => {
   );
 };
 
-export default Introduction;
+export default History;
