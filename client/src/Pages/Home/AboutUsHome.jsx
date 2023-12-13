@@ -25,7 +25,7 @@ const AboutUsHome = () => {
                 </p>
               </div>
               <div>
-                <button className="bg-bluebrand py-2 px-4 text-sm font-light text-white mt-2 hover:opacity-80">
+                <button className="bg-redbrand py-2 px-4 text-sm font-light text-white mt-2 hover:opacity-80">
                   Read More
                 </button>
               </div>

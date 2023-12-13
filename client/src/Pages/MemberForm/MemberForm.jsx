@@ -10,15 +10,15 @@ import {
 const MemberForm = () => {
   return (
     <>
-      <div className="bg-blue-900">
+      <div className="bg-redbrand">
         <div className="container mx-auto">
-          <div className="py-8 flex justify-center">
-            <div>
-              <h1 className="text-5xl text-white tracking-wider">
+          <div className="py-4 flex justify-center">
+            <div className="flex gap-4">
+              <h1 className="text-2xl text-white tracking-wider">
                 STUC MEMBERSHIP FORM
               </h1>
               <h3 className="text-center text-2xl font-extralight text-white">
-                (STUC सदस्यता दर्ता विवरण)
+                (सदस्यता दर्ता विवरण)
               </h3>
             </div>
           </div>

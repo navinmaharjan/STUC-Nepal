@@ -1,3 +1,4 @@
+Link;
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -10,10 +11,37 @@ import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import BannerImage1 from "/bannerImage/bannerImage-1.jpeg";
 import BannerImage2 from "/bannerImage/bannerImage-2.jpeg";
 import BannerImage3 from "/bannerImage/bannerImage-3.jpeg";
+import { Link } from "react-router-dom";
 
 const Banner = () => {
   return (
     <>
+      <div className="bg-redbrand p-2">
+        <div className="container mx-auto">
+          <div className="flex gap-4 items-center">
+            <p className="text-white font-semibold">Notice: </p>
+            <div className="p-1 w-full overflow-hidden ">
+              <div className="text-white font-medium flex gap-10 marquee-container">
+                <Link className="hover:text-bluebrand transition-colors duration-300">
+                  <p><i className="fa-regular fa-hand-point-right text-white"></i>
+                    १९९७ साल देखि विभिन्न कालखण्डमा नेपाली जनताले संचालन गरेका
+                    राणा विरोधी आन्दोलन, निरंकुश
+                  </p>
+                </Link>
+                <Link className="hover:text-bluebrand transition-colors duration-300">
+                  <p>
+                    १९९७ साल देखि विभिन्न कालखण्डमा नेपाली जनताले संचालन गरेका
+                    राणा विरोधी आन्दोलन,
+                  </p>
+                </Link>
+                <Link className="hover:text-bluebrand transition-colors duration-300">
+                  <p>१९९७ साल देखि विभिन्न कालखण्डमा नेपाली जनताले</p>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <Swiper
         // spaceBetween={30}
         // effect="fade"
@@ -28,7 +56,7 @@ const Banner = () => {
         }}
         navigation={false}
         modules={[Autoplay, Pagination, Navigation]}
-        // className="py-8"
+        // className="border-t-4 border-redbrand"
         loop={true}
         style={{
           "--swiper-pagination-color": "#FF1C0A",
@@ -53,7 +81,7 @@ const Banner = () => {
         }}
       >
         <SwiperSlide>
-          <div className="relative w-full h-[480px] border-8 border-white">
+          <div className="relative w-full h-[480px] border-2 border-white">
             <img
               src={BannerImage1}
               alt=""
@@ -62,7 +90,7 @@ const Banner = () => {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="relative w-full h-[480px] border-8 border-white">
+          <div className="relative w-full h-[480px] border-2 border-white">
             <img
               src={BannerImage2}
               alt=""
@@ -71,7 +99,7 @@ const Banner = () => {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="relative w-full h-[480px] border-8 border-white">
+          <div className="relative w-full h-[480px] border-2 border-white">
             <img
               src={BannerImage3}
               alt=""

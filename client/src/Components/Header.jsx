@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import Logo from "../assets/logo.jpeg";
+import Flag from "../assets/stuc_flag.png"
 const Header = () => {
   const [aboutUs, setAboutUs] = useState(false);
   const [gallery, setGallery] = useState(false);
@@ -16,7 +17,7 @@ const Header = () => {
         </div>
       </div>
       <div className="container mx-auto">
-        <div className=" flex justify-center items-center py-2 pr-24">
+        <div className=" flex justify-between items-center py-2 pr-24">
           <Link to="/" className="relative w-1/6 h-32">
             <img
               src={Logo}
@@ -24,32 +25,39 @@ const Header = () => {
               className="absolute w-full h-full object-contain"
             />
           </Link>
-          <div>
-            <h1 className="uppercase text-5xl tracking-wider font-medium text-blue-900">
+          <div className="pr-16">
+            <h1 className="uppercase text-4xl text-center tracking-wider font-medium text-blue-900">
               {/* समाजवादी <span className="text-redbrand">ट्रेड युनियन</span> महासंघ */}
               socialist <span className="text-redbrand">trade union</span>{" "}
               confederation
             </h1>
-            <h1 className="uppercase text-2xl tracking-wider font-medium text-blue-900 text-left">
+            <h1 className="uppercase text-2xl tracking-wider font-medium text-blue-900 text-center">
               समाजवादी ट्रेड युनियन महासंघ, नेपाल (केन्द्रीय समिति)
             </h1>
           </div>
+          <div className="relative w-[150px] h-32">
+            <img
+              src={Flag}
+              alt="logo"
+              className="absolute w-full h-full object-contain"
+            />
+          </div>
         </div>
       </div>
-      <div className="sticky top-0 left-0 z-10 shadow-2xl">
+      <div className="sticky top-0 left-0 z-10">
         <ul className="flex justify-center bg-darkblue gap-8 text-white ">
           <Link to="/">
-            <li className="tracking-wide font-medium py-4">Home</li>
+            <li className="tracking-wide font-medium py-2 px-2 border-b bg-redbrand border-white">Home</li>
           </Link>
           <li
-            className="tracking-wider font-medium relative py-4"
+            className="tracking-wider font-medium relative py-2"
             onMouseEnter={() => setAboutUs(true)}
             onMouseLeave={() => setAboutUs(false)}
           >
             About Us
             {aboutUs && (
               <div
-                className={`absolute top-[56px] left-0 bg-white w-[250px] shadow-2xl`}
+                className={`absolute top-[40px] left-0 bg-white w-[250px] shadow-2xl`}
               >
                 <ul className="text-slate-900">
                   <Link to="/history">
@@ -87,23 +95,23 @@ const Header = () => {
               </div>
             )}
           </li>
-          <Link to="/news-events"><li className="tracking-wider font-medium  py-4">News/Events</li></Link>
-          <Link to="/issue-campaigns"><li className="tracking-wider font-medium  py-4">Issue/Campaigns</li></Link>
-          <Link to="/publications"><li className="tracking-wider font-medium  py-4">Publications</li></Link>
+          <Link to="/news-events"><li className="tracking-wider font-medium  py-2">News/Events</li></Link>
+          <Link to="/issue-campaigns"><li className="tracking-wider font-medium  py-2">Issue/Campaigns</li></Link>
+          <Link to="/publications"><li className="tracking-wider font-medium  py-2">Publications</li></Link>
           <Link to="/member-form">
-            <li className="tracking-wider font-medium  py-4">
+            <li className="tracking-wider font-medium  py-2">
               Membership Form
             </li>
           </Link>
           <li
-            className="tracking-wider font-medium  py-4 relative"
+            className="tracking-wider font-medium  py-2 relative"
             onMouseEnter={() => setGallery(true)}
             onMouseLeave={() => setGallery(false)}
           >
             Gallery
             {gallery && (
               <div
-                className={`absolute top-[56px] left-0 bg-white w-[150px] shadow-2xl`}
+                className={`absolute top-[40px] left-0 bg-white w-[150px] shadow-2xl`}
               >
                 <ul className="text-slate-900">
                   <Link to="/image-gallery">
@@ -120,8 +128,8 @@ const Header = () => {
               </div>
             )}
           </li>
-          <Link to="/download"><li className="tracking-wider font-medium  py-4">Download</li></Link>
-          <Link to="/contact-us"><li className="tracking-wider font-medium  py-4">Contact Us</li></Link>
+          <Link to="/download"><li className="tracking-wider font-medium  py-2">Download</li></Link>
+          <Link to="/contact-us"><li className="tracking-wider font-medium  py-2">Contact Us</li></Link>
         </ul>
       </div>
     </>

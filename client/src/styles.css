@@ -9,3 +9,23 @@
 .swiper-button-next, .swiper-button-prev {
     color: #FF1C0A;
 }
+
+/* Add this to your global styles or a stylesheet */
+.marquee-container {
+  white-space: nowrap;
+  overflow: hidden;
+  animation: marquee 38s linear infinite; /* Adjust duration as needed */
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.marquee-container:hover {
+  animation-play-state: paused;
+}

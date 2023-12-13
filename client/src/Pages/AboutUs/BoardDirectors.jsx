@@ -6,11 +6,11 @@ import BoardDirectors from "../../Data/BoardDirectors";
 const History = () => {
   return (
     <>
-      <div className="bg-blue-700">
+      <div className="bg-redbrand">
         <div className="container mx-auto">
-          <div className="py-8 flex justify-center">
+          <div className="py-4 flex justify-center">
             <div>
-              <h1 className="text-5xl text-white tracking-wider">
+              <h1 className="text-2xl text-white tracking-wider">
                 BOARD OF DIRECTORS (निर्देशक बोर्ड)
               </h1>
             </div>

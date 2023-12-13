@@ -6,11 +6,11 @@ import { Link } from "react-router-dom";
 const News = () => {
   return (
     <>
-      <div className="bg-blue-700">
+      <div className="bg-redbrand">
         <div className="container mx-auto">
-          <div className="py-8 flex justify-center">
+          <div className="py-4 flex justify-center">
             <div>
-              <h1 className="text-5xl text-white tracking-wider">
+              <h1 className="text-2xl text-white tracking-wider">
                 NEWS / EVENTS (समाचार / घटनाक्रम)
               </h1>
             </div>
@@ -22,7 +22,7 @@ const News = () => {
           {/* --------- News Section --------- */}
           <div className="w-3/4 flex flex-col border shadow-xl bg-offWhite">
             <div>
-              <h3 className="text-2xl font-light border-b bg-darkblue text-white px-4 py-2">
+              <h3 className="text-xl font-light border-b bg-darkblue text-white px-4 py-2">
                 News Events
               </h3>
             </div>
@@ -48,7 +48,7 @@ const News = () => {
           {/* --------- Issue Section --------- */}
           <div className="w-1/4 h-[520px] flex flex-col border shadow-xl bg-offWhite">
             <div>
-              <h3 className="text-2xl font-light border-b bg-darkblue text-white px-4 py-2">
+              <h3 className="text-xl font-light border-b bg-darkblue text-white px-4 py-2">
                 Issue / Campaigns
               </h3>
             </div>

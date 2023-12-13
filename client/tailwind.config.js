@@ -8,6 +8,7 @@ export default {
         bluebrand: "#4582C7",
         darkblue: "#232188",
         offWhite: "#F5F5F6",
+        gray:"#6D6E7F"
       },
     },
   },

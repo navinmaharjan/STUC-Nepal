@@ -12,9 +12,9 @@ const NewsDetail = () => {
     <>
       <div className="bg-blue-700">
         <div className="container mx-auto">
-          <div className="py-8 flex justify-center">
+          <div className="py-4 flex justify-center">
             <div>
-              <h1 className="text-5xl text-white tracking-wider">
+              <h1 className="text-2xl text-white tracking-wider">
                 {newsDetail.newsHeadline}
               </h1>
               <p className="text-center text-white">
@@ -38,7 +38,7 @@ const NewsDetail = () => {
           {/* --------- Issue Section --------- */}
           <div className="w-1/4 h-[520px] flex flex-col border shadow-xl bg-offWhite">
             <div>
-              <h3 className="text-2xl font-light border-b bg-darkblue text-white px-4 py-2">
+              <h3 className="text-xl font-light border-b bg-darkblue text-white px-4 py-2">
                 Issue / Campaigns
               </h3>
             </div>
