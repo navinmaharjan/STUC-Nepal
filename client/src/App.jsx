@@ -18,6 +18,7 @@ import VideoDetail from "./Pages/Gallery/VideoDetail";
 import Bidhan from "./Pages/AboutUs/Bidhan";
 import ChairmanMessage from "./Pages/AboutUs/ChairmanMessage";
 import SecretaryMessage from "./Pages/AboutUs/SecretaryMessage";
+import NewsDetail from "./Pages/News/NewsDetail";
 
 const App = () => {
   return (
@@ -41,6 +42,7 @@ const App = () => {
       <Route path="/bidhan" element={<Bidhan />} />
       <Route path="/message-from-chairman" element={<ChairmanMessage />} />
       <Route path="/message-from-secretary" element={<SecretaryMessage />} />
+      <Route path="/news-detail/:id" element={<NewsDetail />} />
     </Routes>
     <Footer />
    </BrowserRouter>
