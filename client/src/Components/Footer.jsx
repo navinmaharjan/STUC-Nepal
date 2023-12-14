@@ -3,7 +3,7 @@ import Logo from "../assets/logo.jpeg";
 const Footer = () => {
   return (
     <>
-      <div className="bg-darkblue">
+      <div className="bg-bluebrand">
         <div className="container mx-auto">
           <div className="flex justify-center items-center flex-col gap-4 py-4">
             <div className="relative w-full h-28">

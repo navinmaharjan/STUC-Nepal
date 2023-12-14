@@ -1,17 +1,11 @@
-Link;
-// Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "../../../src/styles.css";
-
-// import required modules
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
-import BannerImage1 from "/bannerImage/bannerImage-1.jpeg";
-import BannerImage2 from "/bannerImage/bannerImage-2.jpeg";
-import BannerImage3 from "/bannerImage/bannerImage-3.jpeg";
 import { Link } from "react-router-dom";
+import BannerImageData from "../../Data/BannerImageData";
 
 const Banner = () => {
   return (
@@ -23,7 +17,8 @@ const Banner = () => {
             <div className="p-1 w-full overflow-hidden ">
               <div className="text-white font-medium flex gap-10 marquee-container">
                 <Link className="hover:text-bluebrand transition-colors duration-300">
-                  <p><i className="fa-regular fa-hand-point-right text-white"></i>
+                  <p>
+                    <i className="fa-regular fa-hand-point-right text-white"></i>
                     १९९७ साल देखि विभिन्न कालखण्डमा नेपाली जनताले संचालन गरेका
                     राणा विरोधी आन्दोलन, निरंकुश
                   </p>
@@ -80,33 +75,17 @@ const Banner = () => {
           },
         }}
       >
-        <SwiperSlide>
-          <div className="relative w-full h-[480px] border-2 border-white">
-            <img
-              src={BannerImage1}
-              alt=""
-              className="absolute w-full h-full object-cover"
-            />
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="relative w-full h-[480px] border-2 border-white">
-            <img
-              src={BannerImage2}
-              alt=""
-              className="absolute w-full h-full object-cover"
-            />
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="relative w-full h-[480px] border-2 border-white">
-            <img
-              src={BannerImage3}
-              alt=""
-              className="absolute w-full h-full object-cover"
-            />
-          </div>
-        </SwiperSlide>
+        {BannerImageData.map((item) => (
+          <SwiperSlide>
+            <div className="relative w-full h-[480px]">
+              <img
+                src={item.bannerImage}
+                alt=""
+                className="absolute w-full h-full object-cover"
+              />
+            </div>
+          </SwiperSlide>
+        ))}
       </Swiper>
     </>
   );

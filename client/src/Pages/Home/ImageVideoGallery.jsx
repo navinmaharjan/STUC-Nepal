@@ -14,7 +14,7 @@ const ImageVideoGallery = () => {
       <div className="bg-white">
         <div className="container mx-auto py-16">
           <div>
-            <h1 className="text-2xl font-light bg-darkblue text-white px-4 py-2">
+            <h1 className="text-2xl font-light bg-redbrand text-white px-4 py-1">
               Image & Video Gallery
             </h1>
           </div>

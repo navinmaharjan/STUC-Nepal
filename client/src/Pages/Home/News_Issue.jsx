@@ -10,7 +10,7 @@ const News_Issue = () => {
           {/* --------- News Section --------- */}
           <div className="w-3/4 flex flex-col border shadow-2xl bg-offWhite">
             <div>
-              <h3 className="text-2xl font-light border-b bg-darkblue text-white px-4 py-2">
+              <h3 className="text-2xl font-light border-b bg-redbrand text-white px-4 py-1">
                 News Events
               </h3>
             </div>
@@ -36,7 +36,7 @@ const News_Issue = () => {
           {/* --------- Issue Section --------- */}
           <div className="w-1/4 flex flex-col border shadow-2xl bg-offWhite">
             <div>
-              <h3 className="text-2xl font-light border-b bg-darkblue text-white px-4 py-2">
+              <h3 className="text-2xl font-light border-b bg-redbrand text-white px-4 py-1">
                 Issue / Campaigns
               </h3>
             </div>
