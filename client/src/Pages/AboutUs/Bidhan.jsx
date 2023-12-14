@@ -22,8 +22,8 @@ const Bidhan = () => {
                 <p className="font-medium text-xl">{item.bidhanName}</p>
             </div>
               <div className="flex gap-2">
-               <a href={item.bidhanFile} download className="text-black font-semibold bg-white py-1 px-2 hover:text-bluebrand">Download</a>
-               <a href={item.bidhanFile} className="text-black font-semibold bg-white py-1 px-2 hover:text-bluebrand" target="_blank">View</a>
+               <a href={item.bidhanFile} download className="text-white font-semibold bg-redbrand py-1 px-2 hover:opacity-60">Download</a>
+               <a href={item.bidhanFile} className="text-white font-semibold bg-redbrand py-1 px-2 hover:opacity-60" target="_blank">View</a>
               </div>
             </div>
           </div>

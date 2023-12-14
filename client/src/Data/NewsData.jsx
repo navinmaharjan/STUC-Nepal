@@ -11,14 +11,14 @@ const NewsData = [
         'newsHeadline': 'टुकोनको राष्ट्रिय सम्मेलन असोजमा',
         'newsPublishedDate': 'Jul 02, 2023',
         'newsDetail': 'काठमाडौं । राष्ट्रिय प्रजातन्त्र पार्टी नेपाल निकट ट्रेड यूनियन महासंघ नेपाल (टुकोन) को आज सम्पन्न केन्द्रीय पदाधिकारीहरूको बैठकले आगामी असोजको ५ गते श्रमिकहरुको वृहद राष्ट्रिय सम्मेलन काठमाडौंमा गर्ने निर्णय गरेको छ ',
-        'newsImage':'/newsImage/news1.jpeg'
+        'newsImage':'/newsImage/news2.jpeg'
     },
     {
         'id': 3,
         'newsHeadline': 'Headline3',
         'newsPublishedDate': 'Jul 23, 2023',
         'newsDetail': 'काठमाडौं । राष्ट्रिय प्रजातन्त्र पार्टी नेपाल निकट ट्रेड यूनियन महासंघ नेपाल (टुकोन) को आज सम्पन्न केन्द्रीय पदाधिकारीहरूको बैठकले आगामी असोजको ५ गते श्रमिकहरुको वृहद राष्ट्रिय सम्मेलन काठमाडौंमा गर्ने निर्णय गरेको छ ',
-        'newsImage':'/newsImage/news1.jpeg'
+        'newsImage':'/newsImage/news3.jpeg'
     }
 ]
 export default NewsData

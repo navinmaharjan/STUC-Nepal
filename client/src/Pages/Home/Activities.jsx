@@ -1,17 +1,20 @@
 import React from "react";
 import ActivityData from "../../Data/ActivitiesData";
+import Button from "../../Components/Button";
+import { Link } from "react-router-dom";
+
 const Activities = () => {
   return (
     <>
       <div className="bg-offWhite">
         <div className="container mx-auto py-16">
           <div>
-            <h1 className="text-2xl font-light bg-redbrand text-white px-4 py-1">
+            <h1 className="text-2xl font-light bg-bluebrand text-white px-4 py-1">
               Major Activities
             </h1>
           </div>
 
-          <div className="flex gap-4 pt-3">
+          <div className="flex gap-2 pt-2">
             {ActivityData.map((item) => (
               <>
                 <div className="flex flex-col bg-white">
@@ -28,6 +31,9 @@ const Activities = () => {
                     </h1>
                     <p className="py-1 text-sm">{item.activityDate}</p>
                     <p>{item.activityDetail.substring(0, 100)}...</p>
+                    <div className="pb-4">
+                     <Link to={`/activities-detail/${item.activityHeading}`}> <Button /></Link>
+                    </div>
                   </div>
                 </div>
               </>

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import AboutUsImage from "../../assets/aboutUsImage.jpg";
 
 const AboutUsHome = () => {
@@ -5,13 +6,13 @@ const AboutUsHome = () => {
     <>
       <div className="bg-offWhite">
         <div className="container mx-auto">
-          <div className="flex items-center py-10 gap-4  mx-40">
+          <div className="flex items-center py-10 gap-20">
             <div className="w-2/3 flex flex-col">
               <div>
-                <h3 className="text-2xl border-b font-light">Introduction</h3>
+                <h3 className="text-2xl border-b font-light">Introduction(परिचय)</h3>
               </div>
               <div>
-                <p className="font-light tracking-wide text-slate-700 py-2">
+                <p className="font-medium tracking-wide text-slate-900 py-2">
                   १९९७ साल देखि विभिन्न कालखण्डमा नेपाली जनताले संचालन गरेका
                   राणा विरोधी आन्दोलन, निरंकुश पञ्चायत विरोधी आन्दोलन,
                   राजतन्त्रको अन्त्य तथा राष्ट्रिय स्वाधीनताको पक्षमा भएका
@@ -25,12 +26,12 @@ const AboutUsHome = () => {
                 </p>
               </div>
               <div>
-                <button className=" border border-redbrand py-2 px-4 text-sm font-medium text-redbrand mt-2 transition duration-300 hover:bg-redbrand hover:text-white">
+                <Link to="/history" className=" border border-redbrand py-2 px-4 text-sm font-medium text-redbrand mt-2 transition duration-300 hover:bg-redbrand hover:text-white">
                   Read More
-                </button>
+                </Link>
               </div>
             </div>
-            <div className="w-1/3 relative h-60 shadow-2xl border-8 border-white">
+            <div className="w-1/3 relative h-80 shadow-2xl border-2 border-white">
               <img
                 src={AboutUsImage}
                 alt=""
