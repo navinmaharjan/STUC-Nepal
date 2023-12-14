@@ -8,7 +8,7 @@ const AboutUsHome = () => {
           <div className="flex items-center py-10 gap-4  mx-40">
             <div className="w-2/3 flex flex-col">
               <div>
-                <h3 className="text-2xl border-b font-light">About Us</h3>
+                <h3 className="text-2xl border-b font-light">Introduction</h3>
               </div>
               <div>
                 <p className="font-light tracking-wide text-slate-700 py-2">
@@ -25,7 +25,7 @@ const AboutUsHome = () => {
                 </p>
               </div>
               <div>
-                <button className="bg-redbrand py-2 px-4 text-sm font-light text-white mt-2 hover:opacity-80">
+                <button className=" border border-redbrand py-2 px-4 text-sm font-medium text-redbrand mt-2 transition duration-300 hover:bg-redbrand hover:text-white">
                   Read More
                 </button>
               </div>

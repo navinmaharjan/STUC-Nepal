@@ -1,6 +1,7 @@
 import AboutUsHome from './AboutUsHome'
 import Activities from './Activities'
 import Banner from './Banner'
+import ImageVideoGallery from './ImageVideoGallery'
 import News_Issue from './News_Issue'
 
 const Home = () => {
@@ -10,6 +11,8 @@ const Home = () => {
         <AboutUsHome />
         <News_Issue />
         <Activities />
+        <ImageVideoGallery />
+       
     </>
   )
 }

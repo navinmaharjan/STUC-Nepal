@@ -43,6 +43,7 @@ const App = () => {
       <Route path="/message-from-chairman" element={<ChairmanMessage />} />
       <Route path="/message-from-secretary" element={<SecretaryMessage />} />
       <Route path="/news-detail/:id" element={<NewsDetail />} />
+    
     </Routes>
     <Footer />
    </BrowserRouter>
