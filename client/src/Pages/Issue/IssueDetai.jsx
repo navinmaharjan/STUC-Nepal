@@ -3,9 +3,9 @@ import NewsData from "../../Data/NewsData";
 import IssueData from "../../Data/IssueData";
 import Button from "../../Components/Button";
 
-const NewsDetail = () => {
+const IssueDetail = () => {
   const { id } = useParams();
-  const newsDetail = NewsData.find((item) => item.newsHeadline === id);
+  const issueDetail = IssueData.find((item) => item.issueHeadline === id);
 
   return (
     <>
@@ -14,7 +14,7 @@ const NewsDetail = () => {
           <div className="py-4 flex justify-center">
             <div>
               <h1 className="text-2xl text-white tracking-wider">
-                {newsDetail.newsHeadline}
+                {issueDetail.issueHeadline}
               </h1>
             </div>
           </div>
@@ -27,31 +27,35 @@ const NewsDetail = () => {
           <div className="w-3/4 flex p-8 border shadow-xl bg-offWhite flex-col items-start">
             <div className="relative w-full h-[500px]">
               <img
-                src={newsDetail.newsImage}
+                src={issueDetail.issueImage}
                 alt=""
                 className="absolute w-full h-full object-cover"
               />
             </div>
             <p className="text-center text-slate-900 pt-2">
-              {newsDetail.newsPublishedDate}
+              {issueDetail.issueDate}
             </p>
-            <p className="text-lg">{newsDetail.newsDetail}</p>
+            <p className="text-lg">{issueDetail.issueDetail}</p>
           </div>
 
-          {/* --------- Issue Section --------- */}
+          {/* --------- News Section --------- */}
           <div className="w-1/4 h-[520px] flex flex-col border shadow-xl bg-offWhite">
             <div>
               <h3 className="text-xl font-light border-b bg-darkblue text-white px-4 py-2">
-                Issue / Campaigns
+                News / Events
               </h3>
             </div>
-            {IssueData.slice(0, 2).map((item) => (
+            {NewsData.slice(0, 2).map((item) => (
               <div className="flex gap-4 p-2" key={item.id}>
                 <div className="flex flex-col p-4">
-                  <h1 className="text-lg">{item.issueHeadline}</h1>
-                  <p className="text-sm">{item.issueDate}</p>
-                  <p className="text-sm text-slate-700">{item.issueDetail}</p>
-                  <Link to={`/issue-detail/${item.issueHeadline}`}><Button /></Link>
+                  <h1 className="text-lg">{item.newsHeadline}</h1>
+                  <p className="text-sm">{item.newsPublishedDate}</p>
+                  <p className="text-sm text-slate-700">
+                    {item.newsDetail.substring(0, 220)}
+                  </p>
+                  <Link to={`/news-detail/${item.newsHeadline}`}>
+                    <Button />
+                  </Link>
                 </div>
               </div>
             ))}
@@ -62,4 +66,4 @@ const NewsDetail = () => {
   );
 };
 
-export default NewsDetail;
+export default IssueDetail;

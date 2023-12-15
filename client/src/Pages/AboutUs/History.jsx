@@ -78,7 +78,7 @@ const History = () => {
                 <div className="flex flex-col p-4">
                   <h1 className="text-lg">{item.newsHeadline}</h1>
                   <p className="text-sm">{item.newsPublishedDate}</p>
-                  <p className="text-sm text-slate-700">{item.newsDetail}</p>
+                  <p className="text-sm text-slate-700">{item.newsDetail.substring(0,220)}</p>
                   <Button />
                 </div>
               </div>

@@ -1,5 +1,6 @@
 import NewsData from "../../Data/NewsData";
 import Button from "../../Components/Button";
+import { Link } from "react-router-dom";
 
 const ChairmanMessage = () => {
   return (
@@ -63,7 +64,7 @@ const ChairmanMessage = () => {
                   <h1 className="text-lg">{item.newsHeadline}</h1>
                   <p className="text-sm">{item.newsPublishedDate}</p>
                   <p className="text-sm text-slate-700">{item.newsDetail.substring(0,240)}...</p>
-                  <Button />
+                  <Link to={`/news-detail/${item.newsHeadline}`}><Button /></Link>
                 </div>
               </div>
             ))}

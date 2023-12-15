@@ -1,6 +1,7 @@
 import Button from "../../Components/Button";
 import NewsData from "../../Data/NewsData";
 import IssueData from "../../Data/IssueData";
+import { Link } from "react-router-dom";
 
 const News_Issue = () => {
   return (
@@ -27,7 +28,7 @@ const News_Issue = () => {
                   <h1 className="text-lg">{item.newsHeadline}</h1>
                   <p className="text-sm py-1">{item.newsPublishedDate}</p>
                   <p className="text-sm text-slate-700">{item.newsDetail.substring(0,208)}...</p>
-                  <Button />
+                  <Link to={`/news-detail/${item.newsHeadline}`}><Button /></Link>
                 </div>
               </div>
             ))}
@@ -43,10 +44,10 @@ const News_Issue = () => {
             {IssueData.slice(0,2).map((item) => (
               <div className="flex gap-4 p-2" key={item.id}>
                 <div className="flex flex-col p-4">
-                  <h1 className="text-lg">{item.newsHeadline}</h1>
-                  <p className="text-sm py-1">{item.newsPublishedDate}</p>
-                  <p className="text-sm text-slate-700">{item.newsDetail.substring(0,200)}...</p>
-                  <Button />
+                  <h1 className="text-lg">{item.issueHeadline}</h1>
+                  <p className="text-sm py-1">{item.issueDate}</p>
+                  <p className="text-sm text-slate-700">{item.issueDetail.substring(0,200)}...</p>
+                  <Link to={`/issue-detail/${item.issueHeadline}`}><Button /></Link>
                 </div>
               </div>
             ))}

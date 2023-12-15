@@ -1,6 +1,8 @@
 import NewsData from "../../Data/NewsData";
 import IssueData from "../../Data/IssueData";
 import Button from "../../Components/Button";
+import { Link } from "react-router-dom";
+
 const Introduction = () => {
   return (
     <>
@@ -20,7 +22,7 @@ const Introduction = () => {
           {/* --------- Issue Section --------- */}
           <div className="w-3/4 flex flex-col border shadow-xl bg-offWhite">
             <div>
-              <h3 className="text-xl font-light border-b bg-darkblue text-white px-4 py-2">
+              <h3 className="text-xl font-light border-b bg-bluebrand text-white px-4 py-1">
                 Issue / Campaigns
               </h3>
             </div>
@@ -28,16 +30,16 @@ const Introduction = () => {
               <div className="flex gap-4 p-2 border-b" key={item.id}>
                 <div className="relative w-1/2 h-60">
                   <img
-                    src={item.newsImage}
+                    src={item.issueImage}
                     alt=""
                     className="absolute w-full h-full object-cover"
                   />
                 </div>
                 <div className="flex flex-col w-1/2 p-4">
-                  <h1 className="text-lg">{item.newsHeadline}</h1>
-                  <p className="text-sm">{item.newsPublishedDate}</p>
-                  <p className="text-sm text-slate-700">{item.newsDetail}</p>
-                  <Button />
+                  <h1 className="text-lg">{item.issueHeadline}</h1>
+                  <p className="text-sm">{item.issueDate}</p>
+                  <p className="text-sm text-slate-700">{item.issueDetail.substring(0,240)}...</p>
+                  <Link to={`/issue-detail/${item.issueHeadline}`}><Button /></Link>
                 </div>
               </div>
             ))}
@@ -46,7 +48,7 @@ const Introduction = () => {
           {/* --------- News Section --------- */}
           <div className="w-1/4 h-[520px] flex flex-col border shadow-xl bg-offWhite">
             <div>
-              <h3 className="text-xl font-light border-b bg-darkblue text-white px-4 py-2">
+              <h3 className="text-xl font-light border-b bg-redbrand text-white px-4 py-1">
                 News / Events
               </h3>
             </div>
@@ -62,8 +64,8 @@ const Introduction = () => {
                 <div className="flex flex-col p-4">
                   <h1 className="text-lg">{item.newsHeadline}</h1>
                   <p className="text-sm">{item.newsPublishedDate}</p>
-                  <p className="text-sm text-slate-700">{item.newsDetail}</p>
-                  <Button />
+                  <p className="text-sm text-slate-700">{item.newsDetail.substring(0,240)}</p>
+                  <Link to={`/news-detail/${item.newsHeadline}`}><Button /></Link>
                 </div>
               </div>
             ))}

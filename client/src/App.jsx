@@ -20,6 +20,7 @@ import ChairmanMessage from "./Pages/AboutUs/ChairmanMessage";
 import SecretaryMessage from "./Pages/AboutUs/SecretaryMessage";
 import NewsDetail from "./Pages/News/NewsDetail";
 import ActivitiesDetail from "./Pages/ActivitiesDetail/ActivitiesDetail";
+import IssueDetail from "./Pages/Issue/IssueDetai";
 
 const App = () => {
   return (
@@ -44,6 +45,7 @@ const App = () => {
       <Route path="/message-from-chairman" element={<ChairmanMessage />} />
       <Route path="/message-from-secretary" element={<SecretaryMessage />} />
       <Route path="/news-detail/:id" element={<NewsDetail />} />
+      <Route path="/issue-detail/:id" element={<IssueDetail />} />
       <Route path="/activities-detail/:id" element={<ActivitiesDetail />} />
     
     </Routes>

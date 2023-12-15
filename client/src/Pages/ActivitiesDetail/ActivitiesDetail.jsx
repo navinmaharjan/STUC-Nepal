@@ -58,9 +58,9 @@ const ActivitiesDetail = () => {
                   />
                 </div> */}
                 <div className="flex flex-col p-4">
-                  <h1 className="text-lg">{item.newsHeadline}</h1>
-                  <p className="text-sm">{item.newsPublishedDate}</p>
-                  <p className="text-sm text-slate-700">{item.newsDetail.substring(0,240)}...</p>
+                  <h1 className="text-lg">{item.issueHeadline}</h1>
+                  <p className="text-sm">{item.issueDate}</p>
+                  <p className="text-sm text-slate-700">{item.issueDetail.substring(0,240)}...</p>
                   <Button />
                 </div>
               </div>
