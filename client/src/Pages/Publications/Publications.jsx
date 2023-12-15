@@ -16,14 +16,23 @@ const Introduction = () => {
       <div className="container mx-auto py-16 flex flex-col gap-4 justify-center">
         {PublicationData.map((item) => (
           <div className="mx-40">
-            <div className="bg-offWhite border w-full p-4 flex justify-between">
+            <div className="bg-offWhite border w-full p-4 flex justify-between items-center">
               <div className="flex gap-2 items-center">
+                <div className="relative w-32">
+                  <img src={item.publicationImage} alt="" />
+                </div>
                 <p className="font-medium text-2xl">{item.publicationHeading}</p>
                 <p className="font-medium">{item.publicationDate}</p>
               </div>
               <div className="flex gap-2">
+                <div>
+
                <a href={item.publicationFile} download className="text-black font-semibold bg-white py-1 px-2 hover:text-bluebrand">Download</a>
+                </div>
+                <div>
+
                <a href={item.publicationFile} className="text-black font-semibold bg-white py-1 px-2 hover:text-bluebrand" target="_blank">View</a>
+                </div>
               </div>
             </div>
           </div>

@@ -6,7 +6,7 @@ import "../../../src/styles.css";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import { Link } from "react-router-dom";
 import BannerImageData from "../../Data/BannerImageData";
-
+import NoticeData from "../../Data/NoticeData";
 const Banner = () => {
   return (
     <>
@@ -15,23 +15,12 @@ const Banner = () => {
           <div className="flex gap-4 items-center">
             <p className="text-white font-semibold">Notice: </p>
             <div className="p-1 w-full overflow-hidden ">
-              <div className="text-white font-medium flex gap-10 marquee-container">
-                <Link className="hover:text-bluebrand transition-colors duration-300">
-                  <p>
-                    <i className="fa-regular fa-hand-point-right text-white"></i>
-                    १९९७ साल देखि विभिन्न कालखण्डमा नेपाली जनताले संचालन गरेका
-                    राणा विरोधी आन्दोलन, निरंकुश
-                  </p>
-                </Link>
-                <Link className="hover:text-bluebrand transition-colors duration-300">
-                  <p>
-                    १९९७ साल देखि विभिन्न कालखण्डमा नेपाली जनताले संचालन गरेका
-                    राणा विरोधी आन्दोलन,
-                  </p>
-                </Link>
-                <Link className="hover:text-bluebrand transition-colors duration-300">
-                  <p>१९९७ साल देखि विभिन्न कालखण्डमा नेपाली जनताले</p>
-                </Link>
+              <div className="text-white font-medium flex gap-32 marquee-container">
+                {NoticeData.map((item) => (
+                  <Link to={`/notice-detail/${item.noticeHeadline}`} className="hover:text-bluebrand transition-colors duration-300">
+                    <p>{item.noticeHeadline}</p>
+                  </Link>
+                ))}
               </div>
             </div>
           </div>

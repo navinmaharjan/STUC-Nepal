@@ -14,7 +14,7 @@
 .marquee-container {
   white-space: nowrap;
   overflow: hidden;
-  animation: marquee 38s linear infinite; /* Adjust duration as needed */
+  animation: marquee 30s linear infinite; /* Adjust duration as needed */
 }
 
 @keyframes marquee {

@@ -21,6 +21,9 @@ import SecretaryMessage from "./Pages/AboutUs/SecretaryMessage";
 import NewsDetail from "./Pages/News/NewsDetail";
 import ActivitiesDetail from "./Pages/ActivitiesDetail/ActivitiesDetail";
 import IssueDetail from "./Pages/Issue/IssueDetai";
+import PressRelease from "./Pages/PressRelease/PressRelease";
+import NoticeDetail from "./Pages/Notice/NoticeDetail";
+import Notice from "./Pages/Notice/Notice";
 
 const App = () => {
   return (
@@ -47,6 +50,9 @@ const App = () => {
       <Route path="/news-detail/:id" element={<NewsDetail />} />
       <Route path="/issue-detail/:id" element={<IssueDetail />} />
       <Route path="/activities-detail/:id" element={<ActivitiesDetail />} />
+      <Route path="/notice-detail/:id" element={<NoticeDetail />} />
+      <Route path="/notice" element={<Notice/>} />
+      <Route path="/press-release" element={<PressRelease />} />
     
     </Routes>
     <Footer />

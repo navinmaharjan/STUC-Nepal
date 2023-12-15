@@ -45,7 +45,7 @@ const Header = () => {
         </div>
       </div>
       <div className="sticky top-0 left-0 z-10">
-        <ul className="flex justify-center bg-darkblue gap-8 text-white ">
+        <ul className="flex justify-center bg-darkblue gap-4 text-white ">
           <Link to="/">
             <li className="tracking-wide font-medium py-2 px-4 border-b bg-bluebrand border-white">Home</li>
           </Link>
@@ -129,6 +129,7 @@ const Header = () => {
             )}
           </li>
           <Link to="/download"><li className="tracking-wider font-medium  py-2 px-4">Download</li></Link>
+          <Link to="/press-release"><li className="tracking-wider font-medium  py-2 px-4">Press Release</li></Link>
           <Link to="/contact-us"><li className="tracking-wider font-medium  py-2 px-4">Contact Us</li></Link>
         </ul>
       </div>
