@@ -12,7 +12,7 @@ const AboutUsHome = () => {
                 <h3 className="text-2xl border-b font-light">Introduction(परिचय)</h3>
               </div>
               <div>
-                <p className="font-medium tracking-wide text-slate-900 py-2">
+                <p className="text-sm tracking-wide text-slate-700 py-2">
                   १९९७ साल देखि विभिन्न कालखण्डमा नेपाली जनताले संचालन गरेका
                   राणा विरोधी आन्दोलन, निरंकुश पञ्चायत विरोधी आन्दोलन,
                   राजतन्त्रको अन्त्य तथा राष्ट्रिय स्वाधीनताको पक्षमा भएका

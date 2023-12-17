@@ -11,9 +11,9 @@ const NoticeDetail = () => {
     <>
       <div className="bg-redbrand">
         <div className="container mx-auto">
-          <div className="py-4 flex justify-center">
+          <div className="py-2 sm:py-4 flex justify-center">
             <div>
-              <h1 className="text-2xl text-white tracking-wider">
+              <h1 className="text-base sm:text-2xl text-white tracking-wider">
                 {noticeDetail.noticeHeadline}
               </h1>
             </div>
@@ -22,15 +22,15 @@ const NoticeDetail = () => {
       </div>
 
       <div className="container mx-auto">
-        <div className="flex py-10 gap-4">
+        <div className="flex py-4 sm:py-10 gap-4">
           {/* --------- News Detail --------- */}
-          <div className="w-3/4 flex p-8 border shadow-xl bg-offWhite flex-col items-start">
+          <div className="sm:w-3/4 flex p-8 border shadow-xl bg-offWhite flex-col items-start">
             <p className="text-lg">{noticeDetail.noticeDetail}</p>
             <Link to="/notice" className="pt-8">See All Notices</Link>
           </div>
 
           {/* --------- Issue Section --------- */}
-          <div className="w-1/4 h-[520px] flex flex-col border shadow-xl bg-offWhite">
+          <div className="w-1/4 h-[520px]  flex-col border shadow-xl bg-offWhite hidden sm:flex">
             <div>
               <h3 className="text-xl font-light border-b bg-darkblue text-white px-4 py-2">
                 Issue / Campaigns
