@@ -14,11 +14,11 @@ const Activities = () => {
             </h1>
           </div>
 
-          <div className="flex gap-2 pt-2">
+          <div className="flex gap-2 pt-2 flex-col sm:flex-row">
             {ActivityData.map((item) => (
               <>
                 <div className="flex flex-col bg-white">
-                  <div className="relative w-[500px] h-80 overflow-hidden">
+                  <div className="relative sm:w-[500px] h-80 overflow-hidden">
                     <img
                       src={item.activityImage}
                       alt=""

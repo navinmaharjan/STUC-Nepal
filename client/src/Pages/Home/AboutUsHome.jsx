@@ -6,8 +6,8 @@ const AboutUsHome = () => {
     <>
       <div className="bg-offWhite">
         <div className="container mx-auto">
-          <div className="flex items-center py-10 gap-20">
-            <div className="w-2/3 flex flex-col">
+          <div className="flex items-center py-4 sm:py-10 gap-4 sm:gap-20 flex-col sm:flex-row">
+            <div className="sm:w-2/3 flex flex-col px-4 sm:px-0">
               <div>
                 <h3 className="text-2xl border-b font-light">Introduction(परिचय)</h3>
               </div>
@@ -31,7 +31,7 @@ const AboutUsHome = () => {
                 </Link>
               </div>
             </div>
-            <div className="w-1/3 relative h-80 shadow-2xl border-2 border-white">
+            <div className="sm:w-1/3 w-full relative h-80 shadow-2xl border-2 border-white">
               <img
                 src={AboutUsImage}
                 alt=""

@@ -7,7 +7,7 @@ const Header = () => {
   const [gallery, setGallery] = useState(false);
   return (
     <>
-      <div className="bg-darkblue">
+      <div className="bg-darkblue hidden sm:block">
         <div className="container mx-auto">
           <div className="flex text-white gap-4 font-light py-2 text-sm">
             <a href="">bhandari.hikmat01@gmail.com</a>
@@ -17,25 +17,24 @@ const Header = () => {
         </div>
       </div>
       <div className="container mx-auto">
-        <div className=" flex justify-between items-center py-2 pr-24">
-          <Link to="/" className="relative w-1/6 h-32">
+        <div className=" flex justify-between items-center py-2 sm:pr-24 flex-col sm:flex-row">
+          <Link to="/" className="relative w-1/6 h-32 hidden sm:block">
             <img
               src={Logo}
               alt="logo"
               className="absolute w-full h-full object-contain"
             />
           </Link>
-          <div className="pr-16">
-            <h1 className="uppercase text-4xl text-center tracking-wider font-bold text-blue-900">
-              {/* समाजवादी <span className="text-redbrand">ट्रेड युनियन</span> महासंघ */}
+          <div className="pr-0 sm:pr-16">
+            <h1 className="uppercase text-xl sm:text-4xl text-center tracking-wider font-bold text-blue-900">
               socialist <span className="text-redbrand">trade union</span>{" "}
               confederation
             </h1>
-            <h1 className="uppercase text-2xl tracking-wider font-medium text-blue-900 text-center">
+            <h1 className="uppercase text-medium  sm:text-2xl tracking-wider font-medium text-blue-900 text-center">
               समाजवादी ट्रेड युनियन महासंघ, नेपाल (केन्द्रीय समिति)
             </h1>
           </div>
-          <div className="relative w-[150px] h-32">
+          <div className="relative w-[150px] h-32 hidden sm:block">
             <img
               src={Flag}
               alt="logo"
@@ -45,7 +44,7 @@ const Header = () => {
         </div>
       </div>
       <div className="sticky top-0 left-0 z-10">
-        <ul className="flex justify-center bg-darkblue gap-4 text-white ">
+        <ul className=" justify-center bg-darkblue gap-4 text-white hidden sm:flex">
           <Link to="/">
             <li className="tracking-wide font-medium py-2 px-4 border-b bg-bluebrand border-white">Home</li>
           </Link>

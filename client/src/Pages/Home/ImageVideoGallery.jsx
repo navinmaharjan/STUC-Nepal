@@ -12,17 +12,17 @@ const ImageVideoGallery = () => {
   return (
     <>
       <div className="bg-white">
-        <div className="container mx-auto py-16">
-          <div className="grid grid-cols-6 gap-2">
-            <h1 className="text-2xl font-light bg-bluebrand text-white px-4 py-1 col-start-1 col-end-5">
+        <div className="container mx-auto py-16 hidden sm:block">
+          <div className="grid sm:grid-cols-6 gap-2">
+            <h1 className="text-2xl font-light bg-bluebrand text-white px-4 py-1 sm:col-start-1 sm:col-end-5">
               Image Gallery
             </h1>
-            <h1 className="text-2xl font-light bg-redbrand text-white px-4 py-1 col-start-5 col-end-7">
+            <h1 className="text-2xl font-light bg-redbrand text-white px-4 py-1 sm:col-start-5 sm:col-end-7">
               Video Gallery
             </h1>
           </div>
 
-          <div className="grid grid-cols-6 gap-2 pt-2">
+          <div className="grid sm:grid-cols-6 gap-2 pt-2">
             <div className="h-[286px] col-start-1 col-end-5 border">
               <Link to="/image-gallery">
                 <Swiper

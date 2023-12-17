@@ -10,7 +10,7 @@ import NoticeData from "../../Data/NoticeData";
 const Banner = () => {
   return (
     <>
-      <div className="bg-redbrand p-2">
+      <div className="bg-redbrand px-2 sm:px-0 sm:p-2">
         <div className="container mx-auto">
           <div className="flex gap-4 items-center">
             <p className="text-white font-semibold">Notice: </p>
