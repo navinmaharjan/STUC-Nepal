@@ -11,9 +11,9 @@ const NewsDetail = () => {
     <>
       <div className="bg-redbrand">
         <div className="container mx-auto">
-          <div className="py-4 flex justify-center">
+          <div className="py-2 sm:py-4 flex justify-center">
             <div>
-              <h1 className="text-2xl text-white tracking-wider">
+              <h1 className="text base sm:text-2xl text-white tracking-wider">
                 {newsDetail.newsHeadline}
               </h1>
             </div>
@@ -22,10 +22,10 @@ const NewsDetail = () => {
       </div>
 
       <div className="container mx-auto">
-        <div className="flex py-10 gap-4">
+        <div className="flex sm:py-10 gap-4">
           {/* --------- News Detail --------- */}
-          <div className="w-3/4 flex p-8 border shadow-xl bg-offWhite flex-col items-start">
-            <div className="relative w-full h-[500px]">
+          <div className="sm:w-3/4 flex p-4 sm:p-8 border shadow-xl bg-offWhite flex-col items-start">
+            <div className="relative w-full h-[250px] sm:h-[500px]">
               <img
                 src={newsDetail.newsImage}
                 alt=""
@@ -35,11 +35,11 @@ const NewsDetail = () => {
             <p className="text-center text-slate-900 pt-2">
               {newsDetail.newsPublishedDate}
             </p>
-            <p className="text-lg">{newsDetail.newsDetail}</p>
+            <p className="text-base sm:text-lg">{newsDetail.newsDetail}</p>
           </div>
 
           {/* --------- Issue Section --------- */}
-          <div className="w-1/4 h-[520px] flex flex-col border shadow-xl bg-offWhite">
+          <div className="w-1/4 h-[520px] flex-col border shadow-xl bg-offWhite hidden sm:flex">
             <div>
               <h3 className="text-xl font-light border-b bg-darkblue text-white px-4 py-2">
                 Issue / Campaigns
