@@ -26,7 +26,7 @@ const AboutUsHome = () => {
                 </p>
               </div>
               <div>
-                <Link to="/history" className=" border border-redbrand py-2 px-4 text-sm font-medium text-redbrand mt-2 transition duration-300 hover:bg-redbrand hover:text-white">
+                <Link to="/introduction" className=" border border-redbrand py-2 px-4 text-sm font-medium text-redbrand mt-2 transition duration-300 hover:bg-redbrand hover:text-white">
                   Read More
                 </Link>
               </div>

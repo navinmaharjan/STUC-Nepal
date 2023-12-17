@@ -1,22 +1,22 @@
 import ModalImage from "react-modal-image";
 import AssociateData from "../../Data/AssociateData";
 const Associate = () => {
-  const filterAssociate = AssociateData.filter((item) => item.id == 16)
+  const filterAssociate = AssociateData.filter((item) => item.id === 16)
   return (
     <>
       <div className="bg-redbrand">
         <div className="container mx-auto">
-          <div className="py-4 flex justify-center">
+          <div className="py-2 sm:py-4 flex justify-center">
             <div>
-              <h1 className="text-2xl text-white tracking-wider">
+              <h1 className="text-base sm:text-2xl text-white tracking-wider">
                 ASSOCIATE ORGANIZATION
               </h1>
             </div>
           </div>
         </div>
       </div>
-      <div className="bg-offWhite py-16">
-        <div className="container mx-auto flex justify-center">
+      <div className="bg-offWhite sm:py-16">
+        <div className="container mx-auto grid grid-cols-1 sm:flex sm:flex-row sm:justify-center">
         {filterAssociate.map((item) => (
             <div className="flex flex-col border-2 p-2 bg-white mb-4">
               <div>
@@ -41,7 +41,7 @@ const Associate = () => {
             </div>
           ))}
         </div>
-        <div className="container mx-auto grid grid-cols-4 gap-4 ">
+        <div className="container mx-auto grid sm:grid-cols-4 gap-4 ">
           {AssociateData.slice(0,13).map((item) => (
             <div className="flex flex-col border-2 p-2 bg-white">
               <div>

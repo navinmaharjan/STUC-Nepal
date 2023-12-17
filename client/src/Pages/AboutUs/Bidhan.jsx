@@ -5,21 +5,21 @@ const Bidhan = () => {
     <>
       <div className="bg-redbrand">
         <div className="container mx-auto">
-          <div className="py-4 flex justify-center">
+          <div className="py-2 sm:py-4 flex justify-center">
             <div>
-              <h1 className="text-2xl text-white tracking-wider">
+              <h1 className="text-base sm:text-2xl text-white tracking-wider">
                 Legislation (विधान)
               </h1>
             </div>
           </div>
         </div>
       </div>
-      <div className="container mx-auto py-16 flex flex-col gap-4 justify-center">
+      <div className="container mx-auto py-4 px-4 sm:px-0 sm:py-16 flex flex-col gap-4 justify-center">
         {BidhanData.map((item) => (
-          <div className="mx-40">
+          <div className="sm:mx-40">
             <div className="bg-offWhite border w-full p-4 flex justify-between">
               <div className="flex gap-2 items-center">
-                <p className="font-medium text-xl">{item.bidhanName}</p>
+                <p className="font-medium sm:text-xl">{item.bidhanName}</p>
             </div>
               <div className="flex gap-2">
                <a href={item.bidhanFile} download className="text-white font-semibold bg-redbrand py-1 px-2 hover:opacity-60">Download</a>

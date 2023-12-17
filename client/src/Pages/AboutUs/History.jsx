@@ -6,9 +6,9 @@ const History = () => {
     <>
       <div className="bg-redbrand">
         <div className="container mx-auto">
-          <div className="py-4 flex justify-center">
+          <div className="py-2 sm:py-4 flex justify-center">
             <div>
-              <h1 className="text-2xl text-white tracking-wider">
+              <h1 className=" text-base sm:text-2xl text-white tracking-wider">
                 Introduction (परिचय)
               </h1>
             </div>
@@ -16,10 +16,10 @@ const History = () => {
         </div>
       </div>
       <div className="container mx-auto">
-        <div className="flex py-10 gap-4">
+        <div className="flex py-4 sm:py-10 gap-4 px-4 sm:px-0">
           {/* --------- Issue Section --------- */}
-          <div className="w-3/4 flex p-8 border shadow-xl bg-offWhite">
-          <p className="text-lg">१९९७ साल देखि विभिन्न कालखण्डमा नेपाली जनताले संचालन गरेका राणा
+          <div className="sm:w-3/4 flex sm:p-8 border shadow-xl bg-offWhite">
+          <p className="sm:text-lg p-2 sm:p-0">१९९७ साल देखि विभिन्न कालखण्डमा नेपाली जनताले संचालन गरेका राणा
               विरोधी आन्दोलन, निरंकुश पञ्चायत विरोधी आन्दोलन, राजतन्त्रको अन्त्य
               तथा राष्ट्रिय स्वाधीनताको पक्षमा भएका शान्तिपूर्ण जनक्रान्ति,
               जनयुद्ध, मधेश जनविद्रोह, आदीवासी जनजाति, खस, आर्य थारु, महिला,
@@ -60,7 +60,7 @@ const History = () => {
           </div>
 
           {/* --------- News Section --------- */}
-          <div className="w-1/4 h-[520px] flex flex-col border shadow-xl bg-offWhite">
+          <div className="w-1/4 h-[520px]  flex-col border shadow-xl bg-offWhite hidden sm:flex">
             <div>
               <h3 className="text-2xl font-light border-b bg-darkblue text-white px-4 py-2">
                 News / Events
@@ -68,13 +68,6 @@ const History = () => {
             </div>
             {NewsData.slice(0,2).map((item) => (
               <div className="flex gap-4 p-2" key={item.id}>
-                {/* <div className="relative w-1/2 h-60">
-                  <img
-                    src={item.newsImage}
-                    alt=""
-                    className="absolute w-full h-full object-cover"
-                  />
-                </div> */}
                 <div className="flex flex-col p-4">
                   <h1 className="text-lg">{item.newsHeadline}</h1>
                   <p className="text-sm">{item.newsPublishedDate}</p>

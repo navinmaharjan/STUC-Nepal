@@ -59,7 +59,7 @@ const Header = () => {
                 className={`absolute top-[40px] left-0 bg-white w-[250px] shadow-2xl`}
               >
                 <ul className="text-slate-900">
-                  <Link to="/history">
+                  <Link to="/introduction">
                     <li className="py-2 px-4 text-slate-700 hover:bg-offWhite">
                       Inroduction
                     </li>

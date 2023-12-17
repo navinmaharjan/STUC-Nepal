@@ -7,9 +7,9 @@ const ChairmanMessage = () => {
     <>
       <div className="bg-redbrand">
         <div className="container mx-auto">
-          <div className="py-4 flex justify-center">
+          <div className="py-2 sm:py-4 flex justify-center">
             <div>
-              <h1 className="text-2xl text-white tracking-wider">
+              <h1 className="text-base sm:text-2xl text-white tracking-wider">
                 MESSAGE FROM SECRETARY
               </h1>
             </div>
@@ -17,16 +17,16 @@ const ChairmanMessage = () => {
         </div>
       </div>
       <div className="container mx-auto">
-        <div className="flex py-10 gap-4 items-start">
+        <div className="flex sm:py-10 gap-4 items-start">
           {/* --------- Issue Section --------- */}
-          <div className="w-3/4 flex flex-col p-8 border shadow-xl bg-offWhite">
+          <div className="sm:w-3/4 flex flex-col p-8 border shadow-xl bg-offWhite">
             <p className="text-xl font-medium">
               समाजवादी ट्रेड युनियन महासंघ नेपालका अध्यक्ष श्री नवराज दाहालको
               विश्वका श्रमजिवी वर्गहरुको लागि व्यक्त गर्नु भएको सन्देश !{" "}
             </p>
             <p className="text-lg py-2">प्रियश्रमजिवी श्रमिक साथीहरु,</p>
 
-            <p className="mr-40">
+            <p className="sm:mr-40">
               टेक्नोलोजीको विकास पछि विश्वभरि उत्पादन सम्बन्धी एवं उत्पादन
               प्रणालीमा आएको फेरबदल साथै दासी युग समाप्ती हुँदै पुँजीवादी युग
               सम्म आइपुग्दा हामी श्रमजीवी वर्ग माथि शोसन गर्ने शैली एवं तरिका
@@ -45,7 +45,7 @@ const ChairmanMessage = () => {
           </div>
 
           {/* --------- News Section --------- */}
-          <div className="w-1/4 h-[520px] flex flex-col border shadow-xl bg-offWhite">
+          <div className="w-1/4 h-[520px] flex-col border shadow-xl bg-offWhite hidden sm:flex">
             <div>
               <h3 className="text-xl font-light border-b bg-bluebrand text-white px-4 py-2">
                 News / Events
