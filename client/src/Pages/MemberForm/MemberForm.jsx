@@ -12,12 +12,12 @@ const MemberForm = () => {
     <>
       <div className="bg-redbrand">
         <div className="container mx-auto">
-          <div className="py-4 flex justify-center">
-            <div className="flex gap-4">
-              <h1 className="text-2xl text-white tracking-wider">
+          <div className="py-2 sm:py-4 flex justify-center">
+            <div className="flex sm:gap-4 flex-col sm:flex-row">
+              <h1 className="text-base sm:text-2xl text-white tracking-wider">
                 STUC MEMBERSHIP FORM
               </h1>
-              <h3 className="text-center text-2xl font-extralight text-white">
+              <h3 className="text-center text-base sm:text-2xl font-extralight text-white">
                 (सदस्यता दर्ता विवरण)
               </h3>
             </div>
@@ -25,8 +25,8 @@ const MemberForm = () => {
         </div>
       </div>
       <div className="bg-offWhite">
-        <div className="container mx-auto py-14">
-          <div className="mx-60 border p-10 rounded-lg shadow-xl bg-white">
+        <div className="container mx-auto sm:py-14">
+          <div className="sm:mx-60 border p-4 sm:p-10 rounded-lg shadow-xl bg-white">
             <FormControl isRequired className="pb-4">
               <FormLabel>Full name (पुरा नाम)</FormLabel>
               <Input placeholder="First name" />

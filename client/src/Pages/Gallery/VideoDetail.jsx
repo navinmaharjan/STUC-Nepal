@@ -8,11 +8,11 @@ const ImageDetail = () => {
 
   return (
     <>
-      <div className="bg-blue-700">
+      <div className="bg-redbrand">
         <div className="container mx-auto">
-          <div className="py-8 flex justify-center">
+          <div className="py-2 sm:py-4 flex justify-center">
             <div>
-              <h1 className="text-5xl text-white tracking-wider">
+              <h1 className="text-base sm:text-2xl text-white tracking-wider">
                 {dd.videoAlbumName}
               </h1>
               <p className="text-center text-white pt-1">{dd.videoDate}</p>
@@ -20,11 +20,11 @@ const ImageDetail = () => {
           </div>
         </div>
       </div>
-      <div className="container mx-auto py-16 grid grid-cols-4 gap-4 ">
+      <div className="container mx-auto py-4 sm:py-16 grid sm:grid-cols-4 gap-4 px-4 sm:px-0">
         {aa.reverse().map((item) => (
-          <div className="" key={item.id}>
+          <div key={item.id}>
             <div
-              className="relative w-[360px] sm:w-[23rem] h-72"
+              className="relative w-full sm:w-[23rem] sm:h-72"
             >
              <video src={item.videoDetail} controls></video>
             </div>

@@ -15,16 +15,16 @@ const Introduction = () => {
     <>
       <div className="bg-redbrand">
         <div className="container mx-auto">
-          <div className="py-4 flex justify-center">
+          <div className="py-2 sm:py-4 flex justify-center">
             <div>
-              <h1 className="text-2xl text-white tracking-wider">
+              <h1 className="text-base sm:text-2xl text-white tracking-wider">
                 PHOTO GALLERY (तस्बिर पुस्तिका)
               </h1>
             </div>
           </div>
         </div>
       </div>
-      <div className="container mx-auto py-16 grid grid-cols-4 gap-8 ">
+      <div className="container mx-auto py-4 sm:py-16 grid sm:grid-cols-4 gap-8 ">
         {filteredPhotos.reverse().map((item) => (
           <Link key={item.id} to={`/image-detail/${item.galleryAlbumName}`}>
             <div className="p-2 border flex flex-col">

@@ -14,20 +14,20 @@ const Introduction = () => {
     <>
       <div className="bg-redbrand">
         <div className="container mx-auto">
-          <div className="py-4 flex justify-center">
+          <div className="py-2 sm:py-4 flex justify-center">
             <div>
-              <h1 className="text-2xl text-white tracking-wider">
+              <h1 className="text-base sm:text-2xl text-white tracking-wider">
                 VIDEO GALLERY (भिडियो ग्यालरी)
               </h1>
             </div>
           </div>
         </div>
       </div>
-      <div className="container mx-auto py-16 grid grid-cols-4 gap-4 ">
+      <div className="container mx-auto py-4 sm:py-16 grid sm:grid-cols-4 gap-4 px-4 sm:px-0">
         {filteredVideo.reverse().map((item) => (
           <Link key={item.id} to={`/video-detail/${item.videoAlbumName}`}>
             <div className="" key={item.id}>
-              <div className="relative w-[360px] h-60 overflow-hidden">
+              <div className="relative w-full h-60 overflow-hidden">
                 <img
                   src={item.videoThumbnail}
                   alt=""
