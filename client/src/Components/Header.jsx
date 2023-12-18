@@ -1,11 +1,13 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import Logo from "../assets/logo.jpeg";
 import Flag from "../assets/stuc_flag.png";
 const Header = () => {
   const [aboutUs, setAboutUs] = useState(false);
   const [gallery, setGallery] = useState(false);
   const [nav, setNav] = useState(false);
+  const [activeLink, setActiveLink] = useState(0);
+  const location = useLocation();
 
   const handleNav = () => {
     setNav(!nav);
@@ -14,6 +16,51 @@ const Header = () => {
     } else {
       document.body.classList.remove("overflow-hidden");
     }
+  };
+
+  useEffect(() => {
+    const determineActiveLink = () => {
+      const path = location.pathname;
+      if (path === "/") {
+        return 0;
+      } else if (
+        path === "/introduction" ||
+        path === "/associate-organization" ||
+        path === "/board-of-directors" ||
+        path === "/message-from-chairman" ||
+        path === "/message-from-secretary" ||
+        path === "/bidhan"
+      ) {
+        return 1;
+      } else if (path === "/news-events") {
+        return 2;
+      } else if (path === "/issue-campaigns") {
+        return 3;
+      } else if (path === "/publications") {
+        return 4;
+      } else if (path === "/member-form") {
+        return 5;
+      } else if (
+        path === "/image-gallery" ||
+        path === "/image-detail/:id" ||
+        path === "/video-gallery" ||
+        path === "/video-detail/:id"
+      ) {
+        return 6;
+      } else if (path === "/download") {
+        return 7;
+      } else if (path === "/press-release") {
+        return 8;
+      } else if (path === "/contact-us") {
+        return 9;
+      }
+    };
+
+    setActiveLink(determineActiveLink());
+  }, [location.pathname]);
+
+  const handleActiveLink = (index) => {
+    setActiveLink(index);
   };
 
   const handleAboutUs = () => {
@@ -204,14 +251,22 @@ const Header = () => {
         {/* ----------desktop menu ---------- */}
         <ul className=" justify-center gap-4 text-white hidden lg:flex">
           <Link to="/">
-            <li className="tracking-wide font-medium py-2 xl:px-4 bg-bluebrand sm:text-sm">
+            <li
+              onClick={() => handleActiveLink(0)}
+              className={`tracking-wide font-medium py-2 xl:px-4  ${
+                activeLink === 0 ? "bg-bluebrand" : "bg-none"
+              } sm:text-sm`}
+            >
               Home
             </li>
           </Link>
           <li
-            className="tracking-wider font-medium relative py-2 xl:px-4 sm:text-sm"
+            className={`tracking-wider font-medium relative py-2 xl:px-4 ${
+              activeLink === 1 ? "bg-bluebrand" : "bg-none"
+            } sm:text-sm`}
             onMouseEnter={() => setAboutUs(true)}
             onMouseLeave={() => setAboutUs(false)}
+           
           >
             About
             {aboutUs && (
@@ -220,32 +275,32 @@ const Header = () => {
               >
                 <ul className="text-slate-900">
                   <Link to="/introduction">
-                    <li className="py-2 px-4 text-slate-700 hover:bg-offWhite">
+                    <li  onClick={() => handleActiveLink(1)} className="py-2 px-4 text-slate-700 hover:bg-offWhite">
                       Inroduction
                     </li>
                   </Link>
                   <Link to="/associate-organization">
-                    <li className="py-2 px-4 text-slate-700 hover:bg-offWhite">
+                    <li  onClick={() => handleActiveLink(1)} className="py-2 px-4 text-slate-700 hover:bg-offWhite">
                       Associate Organization
                     </li>
                   </Link>
                   <Link to="/board-of-directors">
-                    <li className="py-2 px-4 text-slate-700 hover:bg-offWhite">
+                    <li  onClick={() => handleActiveLink(1)} className="py-2 px-4 text-slate-700 hover:bg-offWhite">
                       Board of Directors
                     </li>
                   </Link>
                   <Link to="message-from-chairman">
-                    <li className="py-2 px-4 text-slate-700 hover:bg-offWhite">
+                    <li  onClick={() => handleActiveLink(1)} className="py-2 px-4 text-slate-700 hover:bg-offWhite">
                       Message from Chairman
                     </li>
                   </Link>
                   <Link to="message-from-secretary">
-                    <li className="py-2 px-4 text-slate-700 hover:bg-offWhite">
+                    <li  onClick={() => handleActiveLink(1)} className="py-2 px-4 text-slate-700 hover:bg-offWhite">
                       Message from Secretary
                     </li>
                   </Link>
                   <Link to="bidhan">
-                    <li className="py-2 px-4 text-slate-700 hover:bg-offWhite">
+                    <li  onClick={() => handleActiveLink(1)} className="py-2 px-4 text-slate-700 hover:bg-offWhite">
                       Bidhans
                     </li>
                   </Link>
@@ -254,29 +309,49 @@ const Header = () => {
             )}
           </li>
           <Link to="/news-events">
-            <li className="tracking-wider font-medium  py-2 xl:px-4 sm:text-sm">
+            <li
+              onClick={() => handleActiveLink(2)}
+              className={`tracking-wider font-medium  py-2 xl:px-4 ${
+                activeLink === 2 ? "bg-bluebrand" : "bg-none"
+              } sm:text-sm`}
+            >
               News/Events
             </li>
           </Link>
-          <Link to="/issue-campaigns">
-            <li className="tracking-wider font-medium  py-2 xl:px-4 sm:text-sm">
+          <Link onClick={() => handleActiveLink(3)} to="/issue-campaigns">
+            <li
+              className={`tracking-wider font-medium  py-2 xl:px-4 ${
+                activeLink === 3 ? "bg-bluebrand" : "bg-none"
+              }  sm:text-sm`}
+            >
               Issue/Campaigns
             </li>
           </Link>
-          <Link to="/publications">
-            <li className="tracking-wider font-medium  py-2 xl:px-4 sm:text-sm">
+          <Link onClick={() => handleActiveLink(4)} to="/publications">
+            <li
+              className={`tracking-wider font-medium  py-2 xl:px-4 ${
+                activeLink === 4 ? "bg-bluebrand" : "bg-none"
+              } sm:text-sm`}
+            >
               Publications
             </li>
           </Link>
-          <Link to="/member-form">
-            <li className="tracking-wider font-medium  py-2 xl:px-4 sm:text-sm">
+          <Link onClick={() => handleActiveLink(5)} to="/member-form">
+            <li
+              className={`tracking-wider font-medium  py-2 xl:px-4 ${
+                activeLink === 5 ? "bg-bluebrand" : "bg-none"
+              }  sm:text-sm`}
+            >
               Membership Form
             </li>
           </Link>
           <li
-            className="tracking-wider font-medium  py-2 xl:px-4 relative sm:text-sm"
+            className={`tracking-wider font-medium  py-2 xl:px-4 relative ${
+              activeLink === 6 ? "bg-bluebrand" : "bg-none"
+            } sm:text-sm`}
             onMouseEnter={() => setGallery(true)}
             onMouseLeave={() => setGallery(false)}
+           
           >
             Gallery
             {gallery && (
@@ -285,12 +360,12 @@ const Header = () => {
               >
                 <ul className="text-slate-900">
                   <Link to="/image-gallery">
-                    <li className="py-2 px-4 text-slate-700 hover:bg-offWhite">
+                    <li  onClick={() => handleActiveLink(6)} className="py-2 px-4 text-slate-700 hover:bg-offWhite">
                       Image Gallery
                     </li>
                   </Link>
                   <Link to="/video-gallery">
-                    <li className="py-2 px-4 text-slate-700 hover:bg-offWhite">
+                    <li  onClick={() => handleActiveLink(6)} className="py-2 px-4 text-slate-700 hover:bg-offWhite">
                       Video Gallery
                     </li>
                   </Link>
@@ -299,15 +374,32 @@ const Header = () => {
             )}
           </li>
           <Link to="/download">
-            <li className="tracking-wider font-medium  py-2 xl:px-4 sm:text-sm">Download</li>
+            <li
+              onClick={() => handleActiveLink(7)}
+              className={`tracking-wider font-medium  py-2 xl:px-4  ${
+                activeLink === 7 ? "bg-bluebrand" : "bg-none"
+              } sm:text-sm`}
+            >
+              Download
+            </li>
           </Link>
           <Link to="/press-release">
-            <li className="tracking-wider font-medium  py-2 xl:px-4 sm:text-sm">
+            <li
+              onClick={() => handleActiveLink(8)}
+              className={`tracking-wider font-medium  py-2 xl:px-4 ${
+                activeLink === 8 ? "bg-bluebrand" : "bg-none"
+              } sm:text-sm`}
+            >
               Press Release
             </li>
           </Link>
           <Link to="/contact-us">
-            <li className="tracking-wider font-medium  py-2 px-4 sm:text-sm">
+            <li
+              onClick={() => handleActiveLink(9)}
+              className={`tracking-wider font-medium  py-2 px-4  ${
+                activeLink === 9 ? "bg-bluebrand" : "bg-none"
+              } sm:text-sm`}
+            >
               Contact
             </li>
           </Link>
