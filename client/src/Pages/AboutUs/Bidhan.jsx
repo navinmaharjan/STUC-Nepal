@@ -14,16 +14,32 @@ const Bidhan = () => {
           </div>
         </div>
       </div>
-      <div className="container mx-auto py-4 px-4 sm:px-0 sm:py-16 flex flex-col gap-4 justify-center">
+      <div className="container mx-auto py-4 px-4 xl:px-0 xl:py-16 flex flex-col gap-4 justify-center">
         {BidhanData.map((item) => (
-          <div className="sm:mx-40">
+          <div className=" xl:mx-40">
             <div className="bg-offWhite border w-full p-4 flex justify-between">
               <div className="flex gap-2 items-center">
                 <p className="font-medium sm:text-xl">{item.bidhanName}</p>
-            </div>
+              </div>
               <div className="flex gap-2">
-               <a href={item.bidhanFile} download className="text-white font-semibold bg-redbrand py-1 px-2 hover:opacity-60">Download</a>
-               <a href={item.bidhanFile} className="text-white font-semibold bg-redbrand py-1 px-2 hover:opacity-60" target="_blank">View</a>
+                <div>
+                  <a
+                    href={item.bidhanFile}
+                    download
+                    className="text-white font-semibold bg-redbrand py-1 px-2 hover:opacity-60"
+                  >
+                    Download
+                  </a>
+                </div>
+                <div>
+                  <a
+                    href={item.bidhanFile}
+                    className="text-white font-semibold bg-redbrand py-1 px-2 hover:opacity-60"
+                    target="_blank"
+                  >
+                    View
+                  </a>
+                </div>
               </div>
             </div>
           </div>

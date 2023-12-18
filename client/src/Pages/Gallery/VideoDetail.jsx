@@ -11,7 +11,7 @@ const ImageDetail = () => {
       <div className="bg-redbrand">
         <div className="container mx-auto">
           <div className="py-2 sm:py-4 flex justify-center">
-            <div>
+            <div className="flex items-center gap-4">
               <h1 className="text-base sm:text-2xl text-white tracking-wider">
                 {dd.videoAlbumName}
               </h1>
@@ -20,7 +20,7 @@ const ImageDetail = () => {
           </div>
         </div>
       </div>
-      <div className="container mx-auto py-4 sm:py-16 grid sm:grid-cols-4 gap-4 px-4 sm:px-0">
+      <div className="container mx-auto py-4 xl:py-16 grid xl:grid-cols-4 md:grid-cols-2 gap-4 px-4 xl:px-0">
         {aa.reverse().map((item) => (
           <div key={item.id}>
             <div

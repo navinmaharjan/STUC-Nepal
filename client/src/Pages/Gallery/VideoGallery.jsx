@@ -23,7 +23,7 @@ const Introduction = () => {
           </div>
         </div>
       </div>
-      <div className="container mx-auto py-4 sm:py-16 grid sm:grid-cols-4 gap-4 px-4 sm:px-0">
+      <div className="container mx-auto py-4 xl:py-16 grid xl:grid-cols-4 md:grid-cols-2 gap-4 px-4 xl:px-0">
         {filteredVideo.reverse().map((item) => (
           <Link key={item.id} to={`/video-detail/${item.videoAlbumName}`}>
             <div className="" key={item.id}>

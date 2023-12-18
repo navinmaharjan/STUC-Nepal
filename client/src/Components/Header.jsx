@@ -35,7 +35,7 @@ const Header = () => {
         </div>
       </div>
       <div className="container mx-auto">
-        <div className=" flex justify-between items-center py-2 sm:pr-24 flex-col sm:flex-row">
+        <div className=" flex justify-between items-center py-2 xl:pr-24 flex-col sm:flex-row">
           <Link to="/" className="relative w-1/6 h-32 hidden sm:block">
             <img
               src={Logo}
@@ -43,12 +43,12 @@ const Header = () => {
               className="absolute w-full h-full object-contain"
             />
           </Link>
-          <div className="pr-0 sm:pr-16">
+          <div className="pr-0 xl:pr-16">
             <h1 className="uppercase text-xl sm:text-4xl text-center tracking-wider font-bold text-blue-900">
               socialist <span className="text-redbrand">trade union</span>{" "}
               confederation
             </h1>
-            <h1 className="uppercase text-medium  sm:text-2xl tracking-wider font-medium text-blue-900 text-center hidden sm:block">
+            <h1 className="uppercase text-medium  sm:text-2xl tracking-wider font-medium text-blue-900 text-center hidden xl:block">
               समाजवादी ट्रेड युनियन महासंघ, नेपाल (केन्द्रीय समिति)
             </h1>
           </div>
@@ -62,18 +62,21 @@ const Header = () => {
         </div>
       </div>
       <div className="sticky top-0 left-0 z-10 bg-darkblue">
-        <div
-          className="py-2 px-4 flex text-white justify-between items-center sm:hidden"
-          onClick={handleNav}
-        >
-          <i className="fa-solid fa-bars text-xl text-brand"></i>
-          <p> समाजवादी ट्रेड युनियन महासंघ, नेपाल (केन्द्रीय समिति)</p>
+        <div className="py-2 px-4 flex text-white justify-between items-center lg:hidden">
+          <i
+            onClick={handleNav}
+            className="fa-solid fa-bars text-xl text-brand"
+          ></i>
+          <p className="lg:hidden sm:pr-48">
+            {" "}
+            समाजवादी ट्रेड युनियन महासंघ, नेपाल (केन्द्रीय समिति)
+          </p>
         </div>
 
         {/* --------- mobile menu ---------- */}
         <div
-          className={`fixed top-0 w-full h-screen overflow-y-auto bg-darkblue  transition-all duration-300 opacity-95 sm:hidden ${
-            !nav ? `-right-[390px]` : `right-0`
+          className={`fixed top-0 w-full h-screen overflow-y-auto bg-darkblue  transition-all duration-300 opacity-95 lg:hidden  ${
+            !nav ? `-right-[1090px]` : `right-0`
           }`}
         >
           <div className="w-full h-full">
@@ -199,21 +202,21 @@ const Header = () => {
         </div>
 
         {/* ----------desktop menu ---------- */}
-        <ul className=" justify-center  gap-4 text-white hidden sm:flex">
+        <ul className=" justify-center gap-4 text-white hidden lg:flex">
           <Link to="/">
-            <li className="tracking-wide font-medium py-2 px-4 border-b bg-bluebrand border-white">
+            <li className="tracking-wide font-medium py-2 xl:px-4 bg-bluebrand sm:text-sm">
               Home
             </li>
           </Link>
           <li
-            className="tracking-wider font-medium relative py-2 px-4"
+            className="tracking-wider font-medium relative py-2 xl:px-4 sm:text-sm"
             onMouseEnter={() => setAboutUs(true)}
             onMouseLeave={() => setAboutUs(false)}
           >
-            About Us
+            About
             {aboutUs && (
               <div
-                className={`absolute top-[40px] left-0 bg-white w-[250px] shadow-2xl`}
+                className={`absolute top-[36px] left-0 bg-white w-[250px] shadow-2xl`}
               >
                 <ul className="text-slate-900">
                   <Link to="/introduction">
@@ -251,34 +254,34 @@ const Header = () => {
             )}
           </li>
           <Link to="/news-events">
-            <li className="tracking-wider font-medium  py-2 px-4">
+            <li className="tracking-wider font-medium  py-2 xl:px-4 sm:text-sm">
               News/Events
             </li>
           </Link>
           <Link to="/issue-campaigns">
-            <li className="tracking-wider font-medium  py-2 px-4">
+            <li className="tracking-wider font-medium  py-2 xl:px-4 sm:text-sm">
               Issue/Campaigns
             </li>
           </Link>
           <Link to="/publications">
-            <li className="tracking-wider font-medium  py-2 px-4">
+            <li className="tracking-wider font-medium  py-2 xl:px-4 sm:text-sm">
               Publications
             </li>
           </Link>
           <Link to="/member-form">
-            <li className="tracking-wider font-medium  py-2 px-4">
+            <li className="tracking-wider font-medium  py-2 xl:px-4 sm:text-sm">
               Membership Form
             </li>
           </Link>
           <li
-            className="tracking-wider font-medium  py-2 px-4 relative"
+            className="tracking-wider font-medium  py-2 xl:px-4 relative sm:text-sm"
             onMouseEnter={() => setGallery(true)}
             onMouseLeave={() => setGallery(false)}
           >
             Gallery
             {gallery && (
               <div
-                className={`absolute top-[40px] left-0 bg-white w-[150px] shadow-2xl`}
+                className={`absolute top-[36px] left-0 bg-white w-[150px] shadow-2xl`}
               >
                 <ul className="text-slate-900">
                   <Link to="/image-gallery">
@@ -296,16 +299,16 @@ const Header = () => {
             )}
           </li>
           <Link to="/download">
-            <li className="tracking-wider font-medium  py-2 px-4">Download</li>
+            <li className="tracking-wider font-medium  py-2 xl:px-4 sm:text-sm">Download</li>
           </Link>
           <Link to="/press-release">
-            <li className="tracking-wider font-medium  py-2 px-4">
+            <li className="tracking-wider font-medium  py-2 xl:px-4 sm:text-sm">
               Press Release
             </li>
           </Link>
           <Link to="/contact-us">
-            <li className="tracking-wider font-medium  py-2 px-4">
-              Contact Us
+            <li className="tracking-wider font-medium  py-2 px-4 sm:text-sm">
+              Contact
             </li>
           </Link>
         </ul>

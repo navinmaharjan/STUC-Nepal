@@ -19,9 +19,9 @@ const History = () => {
         </div>
       </div>
       <div className="container mx-auto">
-        <div className="flex sm:py-10 sm:gap-4 flex-col sm:flex-row">
+        <div className="flex py-4 sm:py-10 sm:gap-4 flex-col sm:flex-row">
           {/* --------- Board of Directors Section --------- */}
-          <div className="sm:w-3/4 flex flex-col p-4 border shadow-xl bg-offWhite pt-5">
+          <div className="w-full xl:w-3/4 flex flex-col p-4 border shadow-xl bg-offWhite pt-5">
             <div className="mx-auto">
               {BoardDirectors.slice(0, 1).map((item) => (
                 <div className="flex flex-col justify-center items-center">
@@ -39,7 +39,7 @@ const History = () => {
                 </div>
               ))}
             </div>
-            <div className="mx-auto flex gap-8 py-8 flex-col sm:flex-row">
+            <div className="mx-auto grid gap-8 py-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 sm:flex-row">
               {BoardDirectors.slice(1, 5).map((item) => (
                 <div className="flex flex-col justify-center items-center">
                   <div className="relative w-40 h-40 rounded-full overflow-hidden">
@@ -56,7 +56,7 @@ const History = () => {
                 </div>
               ))}
             </div>
-            <div className="grid gap-8 sm:first-letter:py-14 sm:grid-cols-4 mx-16">
+            <div className="grid gap-8 sm:first-letter:py-14 xl:grid-cols-4 md:grid-cols-2 mx-16">
               {BoardDirectors.slice(5, 36).map((item) => (
                 <div className="flex flex-col justify-center items-center bg-white py-2 px-4">
                   <p className="text-xl font-semibold text-redbrand">
@@ -69,7 +69,7 @@ const History = () => {
           </div>
 
           {/* --------- News Section --------- */}
-          <div className="w-1/4 h-[520px]  flex-col border bg-offWhite hidden sm:flex">
+          <div className="w-1/4  flex-col border bg-offWhite hidden xl:flex">
             <div>
               <div>
                 <h3 className="text-2xl font-light border-b bg-darkblue text-white px-4 py-2">
@@ -87,7 +87,7 @@ const History = () => {
                 </div>
               ))}
             </div>
-            <div className="bg-offWhite border mt-4">
+            <div className="bg-offWhite  mt-4">
               <div>
                 <h3 className="text-2xl font-light border-b bg-darkblue text-white px-4 py-2">
                   Issue / Campaigns

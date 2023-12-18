@@ -7,9 +7,9 @@ const News_Issue = () => {
   return (
     <>
       <div className="container mx-auto">
-        <div className="flex py-10 gap-4 flex-col sm:flex-row px-4 sm:px-0">
+        <div className="flex py-10 gap-4 flex-col xl:flex-row px-4 sm:px-0">
           {/* --------- News Section --------- */}
-          <div className="sm:w-3/4 flex flex-col border shadow-2xl bg-offWhite">
+          <div className="xl:w-3/4 flex flex-col border shadow-2xl bg-offWhite">
             <div>
               <h3 className="text-2xl font-light border-b bg-bluebrand text-white px-4 py-1">
                 News Events
@@ -35,7 +35,7 @@ const News_Issue = () => {
           </div>
 
           {/* --------- Issue Section --------- */}
-          <div className="sm:w-1/4 flex flex-col border shadow-2xl bg-offWhite">
+          <div className="xl:w-1/4 flex flex-col border shadow-2xl bg-offWhite">
             <div>
               <h3 className="text-2xl font-light border-b bg-redbrand text-white px-4 py-1">
                 Issue / Campaigns

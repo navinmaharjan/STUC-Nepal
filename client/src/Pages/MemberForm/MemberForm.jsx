@@ -25,8 +25,8 @@ const MemberForm = () => {
         </div>
       </div>
       <div className="bg-offWhite">
-        <div className="container mx-auto sm:py-14">
-          <div className="sm:mx-60 border p-4 sm:p-10 rounded-lg shadow-xl bg-white">
+        <div className="container mx-auto py-4 xl:py-14">
+          <div className="xl:mx-60 border p-4 sm:p-10 rounded-lg shadow-xl bg-white">
             <FormControl isRequired className="pb-4">
               <FormLabel>Full name (पुरा नाम)</FormLabel>
               <Input placeholder="First name" />

@@ -39,7 +39,7 @@ const IssueDetail = () => {
           </div>
 
           {/* --------- News Section --------- */}
-          <div className="w-1/4 h-[520px] flex-col border shadow-xl bg-offWhite hidden sm:flex">
+          <div className="w-1/4  flex-col border shadow-xl bg-offWhite hidden sm:flex">
             <div>
               <h3 className="text-xl font-light border-b bg-darkblue text-white px-4 py-2">
                 News / Events

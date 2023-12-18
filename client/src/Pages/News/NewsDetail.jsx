@@ -22,9 +22,9 @@ const NewsDetail = () => {
       </div>
 
       <div className="container mx-auto">
-        <div className="flex sm:py-10 gap-4">
+        <div className="flex py-4 xl:py-10 gap-4">
           {/* --------- News Detail --------- */}
-          <div className="sm:w-3/4 flex p-4 sm:p-8 border shadow-xl bg-offWhite flex-col items-start">
+          <div className="xl:w-3/4 flex p-4 sm:p-8 border shadow-xl bg-offWhite flex-col items-start">
             <div className="relative w-full h-[250px] sm:h-[500px]">
               <img
                 src={newsDetail.newsImage}
@@ -39,7 +39,7 @@ const NewsDetail = () => {
           </div>
 
           {/* --------- Issue Section --------- */}
-          <div className="w-1/4 h-[520px] flex-col border shadow-xl bg-offWhite hidden sm:flex">
+          <div className="w-1/4  flex-col border shadow-xl bg-offWhite hidden xl:flex">
             <div>
               <h3 className="text-xl font-light border-b bg-darkblue text-white px-4 py-2">
                 Issue / Campaigns

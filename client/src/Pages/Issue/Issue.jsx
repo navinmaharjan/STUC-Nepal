@@ -18,9 +18,9 @@ const Introduction = () => {
         </div>
       </div>
       <div className="container mx-auto">
-        <div className="flex py-4 sm:py-10 gap-4">
+        <div className="flex py-4 xl:py-10 gap-4">
           {/* --------- Issue Section --------- */}
-          <div className="sm:w-3/4 flex flex-col border shadow-xl bg-offWhite">
+          <div className="xl:w-3/4 flex flex-col border shadow-xl bg-offWhite">
             <div>
               <h3 className="text-xl font-light border-b bg-bluebrand text-white px-4 py-1">
                 Issue / Campaigns
@@ -50,7 +50,7 @@ const Introduction = () => {
           </div>
 
           {/* --------- News Section --------- */}
-          <div className="w-1/4 h-[520px]  flex-col border shadow-xl bg-offWhite hidden sm:flex">
+          <div className="w-1/4  flex-col border shadow-xl bg-offWhite hidden xl:flex">
             <div>
               <h3 className="text-xl font-light border-b bg-redbrand text-white px-4 py-1">
                 News / Events

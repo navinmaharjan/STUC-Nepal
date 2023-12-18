@@ -17,9 +17,9 @@ const ChairmanMessage = () => {
         </div>
       </div>
       <div className="container mx-auto">
-        <div className="flex sm:py-10 gap-4 items-start">
+        <div className="flex py-4 xl:py-10 gap-4 items-start">
           {/* --------- Issue Section --------- */}
-          <div className="sm:w-3/4 flex flex-col p-8 border shadow-xl bg-offWhite">
+          <div className="xl:w-3/4 flex flex-col p-8 border shadow-xl bg-offWhite">
             <p className="text-xl font-medium">
               समाजवादी ट्रेड युनियन महासंघ नेपालका अध्यक्ष श्री नवराज दाहालको
               विश्वका श्रमजिवी वर्गहरुको लागि व्यक्त गर्नु भएको सन्देश !{" "}
@@ -45,7 +45,7 @@ const ChairmanMessage = () => {
           </div>
 
           {/* --------- News Section --------- */}
-          <div className="w-1/4 h-[520px] flex-col border shadow-xl bg-offWhite hidden sm:flex">
+          <div className="w-1/4 h-[520px] flex-col border shadow-xl bg-offWhite hidden xl:flex">
             <div>
               <h3 className="text-xl font-light border-b bg-bluebrand text-white px-4 py-2">
                 News / Events

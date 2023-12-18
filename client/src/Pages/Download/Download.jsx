@@ -13,12 +13,12 @@ const Introduction = () => {
           </div>
         </div>
       </div>
-      <div className="container mx-auto py-4 sm:py-16 flex flex-col gap-4 justify-center">
+      <div className="container mx-auto py-4 xl:py-16 flex flex-col gap-4 justify-center">
         {DownloadData.map((item) => (
-          <div className="sm:mx-40">
+          <div className="xl:mx-40">
             <div className="bg-offWhite border w-full p-4 flex justify-between flex-col sm:flex-row">
               <div className="flex gap-2 items-center flex-col sm:flex-row">
-                <p className="font-medium text-2xl text-center">{item.publicationHeading}</p>
+                <p className="font-medium xl:text-2xl text-center">{item.publicationHeading}</p>
                 <p className="font-medium">{item.publicationDate}</p>
               </div>
               <div className="flex gap-2 justify-center">

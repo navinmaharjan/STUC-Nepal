@@ -24,7 +24,7 @@ const Introduction = () => {
           </div>
         </div>
       </div>
-      <div className="container mx-auto py-4 sm:py-16 grid sm:grid-cols-4 gap-8 ">
+      <div className="container mx-auto py-4 xl:py-16 grid md:grid-cols-2 xl:grid-cols-4 gap-8 ">
         {filteredPhotos.reverse().map((item) => (
           <Link key={item.id} to={`/image-detail/${item.galleryAlbumName}`}>
             <div className="p-2 border flex flex-col">

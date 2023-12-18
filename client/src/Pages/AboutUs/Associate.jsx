@@ -15,7 +15,7 @@ const Associate = () => {
           </div>
         </div>
       </div>
-      <div className="bg-offWhite sm:py-16">
+      <div className="bg-offWhite py-4 sm:py-16">
         <div className="container mx-auto grid grid-cols-1 sm:flex sm:flex-row sm:justify-center">
         {filterAssociate.map((item) => (
             <div className="flex flex-col border-2 p-2 bg-white mb-4">
@@ -41,7 +41,7 @@ const Associate = () => {
             </div>
           ))}
         </div>
-        <div className="container mx-auto grid sm:grid-cols-4 gap-4 ">
+        <div className="container mx-auto grid xl:grid-cols-4 md:grid-cols-2 gap-4 ">
           {AssociateData.slice(0,13).map((item) => (
             <div className="flex flex-col border-2 p-2 bg-white">
               <div>

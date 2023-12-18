@@ -14,7 +14,7 @@ const Introduction = () => {
         </div>
       </div>
       <div className="bg-offWhite">
-        <div className="container mx-auto w-full py-4 sm:py-16">
+        <div className="container mx-auto w-full py-4 xl:py-16">
           <div className="flex items-center gap-4 flex-col sm:flex-row px-4 sm:px-0">
             <div
               className=" w-full"

@@ -15,17 +15,17 @@ const Introduction = () => {
       </div>
       <div className="container mx-auto py-4 sm:py-16 flex flex-col gap-4 justify-center">
         {PressReleaseData.map((item) => (
-          <div className="sm:mx-40">
+          <div className="xl:mx-40">
             <div className="bg-offWhite border w-full p-4 flex justify-between items-center flex-col sm:flex-row">
               <div className="flex gap-2 items-center flex-col sm:flex-row">
-                <div className="relative w-32 h-20">
+                <div className="relative w-20 h-20 xl:w-32 xl:h-20">
                   <img
                     src={item.pressReleaseImage}
                     alt=""
                     className="absolute w-full h-full object-cover"
                   />
                 </div>
-                <p className="font-medium text-2xl text-center">
+                <p className="font-medium xl:text-2xl text-center">
                   {item.pressReleaseHeading}
                 </p>
                 <p className="font-medium">{item.pressReleaseDate}</p>

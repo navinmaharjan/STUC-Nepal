@@ -18,7 +18,7 @@ const History = () => {
       <div className="container mx-auto">
         <div className="flex py-4 sm:py-10 gap-4 px-4 sm:px-0">
           {/* --------- Issue Section --------- */}
-          <div className="sm:w-3/4 flex sm:p-8 border shadow-xl bg-offWhite">
+          <div className="xl:w-3/4 flex sm:p-8 border shadow-xl bg-offWhite">
           <p className="sm:text-lg p-2 sm:p-0">१९९७ साल देखि विभिन्न कालखण्डमा नेपाली जनताले संचालन गरेका राणा
               विरोधी आन्दोलन, निरंकुश पञ्चायत विरोधी आन्दोलन, राजतन्त्रको अन्त्य
               तथा राष्ट्रिय स्वाधीनताको पक्षमा भएका शान्तिपूर्ण जनक्रान्ति,
@@ -60,7 +60,7 @@ const History = () => {
           </div>
 
           {/* --------- News Section --------- */}
-          <div className="w-1/4 h-[520px]  flex-col border shadow-xl bg-offWhite hidden sm:flex">
+          <div className="w-1/4  flex-col border shadow-xl bg-offWhite hidden xl:flex">
             <div>
               <h3 className="text-2xl font-light border-b bg-darkblue text-white px-4 py-2">
                 News / Events
