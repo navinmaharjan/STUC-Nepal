@@ -72,15 +72,7 @@ const Header = () => {
   };
   return (
     <>
-      <div className="bg-darkblue hidden sm:block">
-        <div className="container mx-auto">
-          <div className="flex text-white gap-4 font-light py-2 text-sm">
-            <a href="">bhandari.hikmat01@gmail.com</a>
-            <a href="">+977-9851097496</a>
-            <p>Kathmandu, Nepal</p>
-          </div>
-        </div>
-      </div>
+    
       <div className="container mx-auto">
         <div className=" flex justify-between items-center py-2 xl:pr-24 flex-col sm:flex-row">
           <Link to="/" className="relative w-1/6 h-32 hidden sm:block">
@@ -266,7 +258,6 @@ const Header = () => {
             } sm:text-sm`}
             onMouseEnter={() => setAboutUs(true)}
             onMouseLeave={() => setAboutUs(false)}
-           
           >
             About
             {aboutUs && (

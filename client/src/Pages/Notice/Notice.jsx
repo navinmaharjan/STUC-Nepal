@@ -15,9 +15,9 @@ const Introduction = () => {
           </div>
         </div>
       </div>
-      <div className="container mx-auto py-4 sm:py-16 flex flex-col gap-4 justify-center">
+      <div className="container mx-auto py-4 xl:py-16 flex flex-col gap-4 justify-center">
         {NoticeData.map((item) => (
-          <div className="sm:mx-40">
+          <div className="xl:mx-40">
             <div className="bg-offWhite border w-full p-4 flex justify-between items-center">
               <div className="flex gap-2 items-center">
                

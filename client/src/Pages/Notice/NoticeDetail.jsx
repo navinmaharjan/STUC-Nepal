@@ -24,13 +24,13 @@ const NoticeDetail = () => {
       <div className="container mx-auto">
         <div className="flex py-4 sm:py-10 gap-4">
           {/* --------- News Detail --------- */}
-          <div className="sm:w-3/4 flex p-8 border shadow-xl bg-offWhite flex-col items-start">
+          <div className="xl:w-3/4 flex p-8 border shadow-xl bg-offWhite flex-col items-start">
             <p className="text-lg">{noticeDetail.noticeDetail}</p>
             <Link to="/notice" className="pt-8">See All Notices</Link>
           </div>
 
           {/* --------- Issue Section --------- */}
-          <div className="w-1/4 h-[520px]  flex-col border shadow-xl bg-offWhite hidden sm:flex">
+          <div className="w-1/4 h-[520px]  flex-col border shadow-xl bg-offWhite hidden xl:flex">
             <div>
               <h3 className="text-xl font-light border-b bg-darkblue text-white px-4 py-2">
                 Issue / Campaigns

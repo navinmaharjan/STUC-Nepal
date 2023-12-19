@@ -36,7 +36,7 @@ const ImageVideoGallery = () => {
                   pagination={false}
                   navigation={false}
                   modules={[Autoplay, Pagination, Navigation]}
-                  // className="sm:py-4 py-4 px-4 sm:px-0"
+                
                   loop={true}
                   style={{
                     "--swiper-pagination-color": "#FF1C0A",
@@ -59,7 +59,7 @@ const ImageVideoGallery = () => {
                       spaceBetween: 20,
                     },
                     1280: {
-                      slidesPerView: 4,
+                      slidesPerView: 2,
                       spaceBetween: 10,
                     },
                   }}

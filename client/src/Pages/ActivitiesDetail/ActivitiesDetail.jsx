@@ -42,7 +42,7 @@ const ActivitiesDetail = () => {
           </div>
 
           {/* --------- Issue Section --------- */}
-          <div className="w-1/4 h-[520px] flex flex-col border shadow-xl bg-offWhite">
+          <div className="w-1/4  flex flex-col border shadow-xl bg-offWhite">
             <div>
               <h3 className="text-xl font-light border-b bg-darkblue text-white px-4 py-2">
                 Issue / Campaigns
