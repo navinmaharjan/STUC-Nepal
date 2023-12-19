@@ -1,6 +1,7 @@
 import NewsData from "../../Data/NewsData";
 import Button from "../../Components/Button";
 import { Link } from "react-router-dom";
+import Chairman from "../../assets/chairman.jpg"
 
 const ChairmanMessage = () => {
   return (
@@ -20,6 +21,9 @@ const ChairmanMessage = () => {
         <div className="flex py-4  xl:py-10 gap-4 items-start">
           {/* --------- Message Section --------- */}
           <div className="xl:w-3/4 flex flex-col p-8 border shadow-xl bg-offWhite">
+            <div className="relative w-72 h-48  mb-4 mx-auto">
+              <img src={Chairman} alt="" className="absolute w-full h-full object-cover"  />
+            </div>
             <p className="text-xl font-medium">
               समाजवादी ट्रेड युनियन महासंघ नेपालका अध्यक्ष श्री नवराज दाहालको
               विश्वका श्रमजिवी वर्गहरुको लागि व्यक्त गर्नु भएको सन्देश !{" "}
@@ -45,7 +49,7 @@ const ChairmanMessage = () => {
           </div>
 
           {/* --------- News Section --------- */}
-          <div className="w-1/4 h-[520px] flex-col border shadow-xl bg-offWhite hidden xl:flex">
+          <div className="w-1/4  flex-col border shadow-xl bg-offWhite hidden xl:flex">
             <div>
               <h3 className="text-xl font-light border-b bg-bluebrand text-white px-4 py-2">
                 News / Events
