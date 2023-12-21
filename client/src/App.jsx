@@ -24,40 +24,43 @@ import IssueDetail from "./Pages/Issue/IssueDetai";
 import PressRelease from "./Pages/PressRelease/PressRelease";
 import NoticeDetail from "./Pages/Notice/NoticeDetail";
 import Notice from "./Pages/Notice/Notice";
+import ScrollToTop from "./Components/ScrollToTop";
+
 
 const App = () => {
   return (
-   <BrowserRouter>
-   <Header />
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/associate-organization" element={<Associate />} />
-      <Route path="/introduction" element={<History />} />
-      <Route path="/board-of-directors" element={<BoardDirectors />} />
-      <Route path="/news-events" element={<News />} />
-      <Route path="/issue-campaigns" element={<Issue />} />
-      <Route path="/publications" element={<Publications />} />
-      <Route path="/member-form" element={<MemberForm />} />
-      <Route path="/image-gallery" element={<ImageGallery />} />
-      <Route path='/image-detail/:id' element={<ImageDetail />} />
-      <Route path="/video-gallery" element={<VideoGallery />} />
-      <Route path="/video-detail/:id" element={<VideoDetail />} />
-      <Route path="/download" element={<Download />} />
-      <Route path="/contact-us" element={<Contact />} />
-      <Route path="/bidhan" element={<Bidhan />} />
-      <Route path="/message-from-chairman" element={<ChairmanMessage />} />
-      <Route path="/message-from-secretary" element={<SecretaryMessage />} />
-      <Route path="/news-detail/:id" element={<NewsDetail />} />
-      <Route path="/issue-detail/:id" element={<IssueDetail />} />
-      <Route path="/activities-detail/:id" element={<ActivitiesDetail />} />
-      <Route path="/notice-detail/:id" element={<NoticeDetail />} />
-      <Route path="/notice" element={<Notice/>} />
-      <Route path="/press-release" element={<PressRelease />} />
-    
-    </Routes>
-    <Footer />
-   </BrowserRouter>
-  )
-}
+    <BrowserRouter>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/associate-organization" element={<Associate />} />
+        <Route path="/introduction" element={<History />} />
+        <Route path="/board-of-directors" element={<BoardDirectors />} />
+        <Route path="/news-events" element={<News />} />
+        <Route path="/issue-campaigns" element={<Issue />} />
+        <Route path="/publications" element={<Publications />} />
+        <Route path="/member-form" element={<MemberForm />} />
+        <Route path="/image-gallery" element={<ImageGallery />} />
+        <Route path="/image-detail/:id" element={<ImageDetail />} />
+        <Route path="/video-gallery" element={<VideoGallery />} />
+        <Route path="/video-detail/:id" element={<VideoDetail />} />
+        <Route path="/download" element={<Download />} />
+        <Route path="/contact-us" element={<Contact />} />
+        <Route path="/bidhan" element={<Bidhan />} />
+        <Route path="/message-from-chairman" element={<ChairmanMessage />} />
+        <Route path="/message-from-secretary" element={<SecretaryMessage />} />
+        <Route path="/news-detail/:id" element={<NewsDetail />} />
+        <Route path="/issue-detail/:id" element={<IssueDetail />} />
+        <Route path="/activities-detail/:id" element={<ActivitiesDetail />} />
+        <Route path="/notice-detail/:id" element={<NoticeDetail />} />
+        <Route path="/notice" element={<Notice />} />
+        <Route path="/press-release" element={<PressRelease />} />
+      </Routes>
 
-export default App
+      <Footer />
+      <ScrollToTop />
+    </BrowserRouter>
+  );
+};
+
+export default App;
