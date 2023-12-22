@@ -391,7 +391,7 @@ const Header = () => {
                 activeLink === 9 ? "bg-bluebrand" : "bg-none"
               } sm:text-sm`}
             >
-              Contact Me Not
+              Contact
             </li>
           </Link>
         </ul>
