@@ -27,13 +27,13 @@ const Footer = () => {
             <p className="text-white font-light">Email: info@stucnepal.org</p>
             <div className="flex justify-center items-center gap-4 pt-2">
             <Link to="#" target="_blank">
-              <i className="fa-brands fa-facebook text-white text-xl"></i>
+              <i className="fa-brands fa-facebook text-white text-xl duration-300 transition-colors hover:text-redbrand"></i>
             </Link>
             <Link to="#" target="_blank">
-              <i className="fa-brands fa-youtube text-white text-xl"></i>
+              <i className="fa-brands fa-youtube text-white text-xl duration-300 transition-colors hover:text-redbrand"></i>
             </Link>
             <Link to="#" target="_blank">
-              <i className="fa-brands fa-twitter text-white text-xl"></i>
+              <i className="fa-brands fa-twitter text-white text-xl duration-300 transition-colors hover:text-redbrand"></i>
             </Link>
             </div>
           </div>
