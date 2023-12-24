@@ -25,6 +25,17 @@ const Footer = () => {
             <p className="text-white font-light pt-2">STUC Address, Baluwatar, Kathmandu, Nepal</p>
             <p className="text-white font-light">Ph: 01-5341398, 5326196, 5321194</p>
             <p className="text-white font-light">Email: info@stucnepal.org</p>
+            <div className="flex justify-center items-center gap-4 pt-2">
+            <Link to="#" target="_blank">
+              <i className="fa-brands fa-facebook text-white text-xl"></i>
+            </Link>
+            <Link to="#" target="_blank">
+              <i className="fa-brands fa-youtube text-white text-xl"></i>
+            </Link>
+            <Link to="#" target="_blank">
+              <i className="fa-brands fa-twitter text-white text-xl"></i>
+            </Link>
+            </div>
           </div>
         </div>
       </div>
