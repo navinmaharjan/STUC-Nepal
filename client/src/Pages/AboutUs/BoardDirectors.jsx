@@ -56,9 +56,9 @@ const History = () => {
                 </div>
               ))}
             </div>
-            <div className="grid gap-8 sm:first-letter:py-14 xl:grid-cols-4 md:grid-cols-2 mx-16">
+            <div className="grid gap-8 sm:first-letter:py-14 xl:grid-cols-4 md:grid-cols-2">
               {BoardDirectors.slice(5, 36).map((item) => (
-                <div className="flex flex-col justify-center items-center bg-white py-2 px-4">
+                <div className="flex flex-col justify-center items-center bg-white py-2">
                   <p className="text-xl font-semibold text-redbrand">
                     {item.boardDesignation}
                   </p>
