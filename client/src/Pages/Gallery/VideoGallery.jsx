@@ -1,5 +1,5 @@
 import videoGalleryData from "../../Data/videoGalleryData";
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
 
 const Introduction = () => {
   const uniqueAlbumTypes = [];
@@ -26,19 +26,17 @@ const Introduction = () => {
       <div className="container mx-auto py-4 xl:py-16 grid xl:grid-cols-4 md:grid-cols-2 gap-4 px-4 xl:px-0">
         {filteredVideo.reverse().map((item) => (
           <Link key={item.id} to={`/video-detail/${item.videoAlbumName}`}>
-            <div className="" key={item.id}>
-              <div className="relative w-full h-60 overflow-hidden">
-                <img
-                  src={item.videoThumbnail}
-                  alt=""
-                  className="absolute w-full h-full object-cover"
-                ></img>
+            <div className="border" key={item.id}>
+              <div className="text-center pt-2">
+                <i className="fa-solid fa-video text-4xl text-redbrand"></i>
               </div>
               <div className="flex flex-col text-center text-gray-600">
-                <p className="text-2xl font-medium border-b border-orange">
+                <p className="text-md font-medium border-b border-orange py-2">
                   {item.videoDate}
                 </p>
-                <p className="text-2xl font-medium">{item.videoAlbumName}</p>
+                <p className="text-lg font-medium bg-red-400 text-white">
+                  {item.videoAlbumName}
+                </p>
               </div>
             </div>
           </Link>
