@@ -16,7 +16,7 @@ const ActivitiesDetail = () => {
         <div className="container mx-auto">
           <div className="py-4 flex justify-center">
             <div className="flex gap-4 items-center">
-              <h1 className="text-2xl text-white tracking-wider">
+              <h1 className="text-2xl text-white tracking-wider text-center">
                 {activitiesDetail.activityHeading}
               </h1>
             </div>
@@ -25,9 +25,9 @@ const ActivitiesDetail = () => {
       </div>
 
       <div className="container mx-auto">
-        <div className="flex py-10 gap-4">
+        <div className="flex py-10 gap-4 flex-col sm:flex-row">
           {/* --------- News Detail --------- */}
-          <div className="w-3/4 flex p-8 border shadow-xl bg-offWhite flex-col items-start">
+          <div className="sm:w-3/4 flex p-8 border shadow-xl bg-offWhite flex-col items-start">
             <div className="relative w-full h-[500px]">
               <img
                 src={activitiesDetail.activityImage}
@@ -42,7 +42,7 @@ const ActivitiesDetail = () => {
           </div>
 
           {/* --------- Issue Section --------- */}
-          <div className="w-1/4  flex flex-col border shadow-xl bg-offWhite">
+          <div className="sm:w-1/4  flex flex-col border shadow-xl bg-offWhite">
             <div>
               <h3 className="text-xl font-light border-b bg-darkblue text-white px-4 py-2">
                 Issue / Campaigns

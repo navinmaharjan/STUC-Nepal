@@ -3,13 +3,13 @@ const BoardDirectors = [
         'id': 1,
         'boardDesignation': 'अध्यक्ष',
         'boardMemberName': 'श्री नवराज दाहाल',
-        'boardMemberImage': '/BoardDirectors/person1.jpeg'
+        'boardMemberImage': '/BoardDirectors/Nabaraj Dahal - Adhachya.png'
     },
     {
         'id': 2,
         'boardDesignation': 'सह अध्यक्ष',
         'boardMemberName': 'श्री  गणेश पुडासैनी',
-        'boardMemberImage': '/BoardDirectors/person1.jpeg'
+        'boardMemberImage': '/BoardDirectors/Ganesh Prasad Pudasaini.png'
     },
     {
         'id': 3,
@@ -21,7 +21,7 @@ const BoardDirectors = [
         'id': 4,
         'boardDesignation': 'प्रथम अध्यक्ष',
         'boardMemberName': 'श्री पासाङ दोर्जे मोक्तान',
-        'boardMemberImage': '/BoardDirectors/person1.jpeg'
+        'boardMemberImage': '/BoardDirectors/Pasang Dorje Moktan - Pratham Upadhyacha.png'
     },
     {
         'id': 5,

@@ -72,20 +72,22 @@ const Header = () => {
   };
   return (
     <>
-    
       <div className="container mx-auto">
         <div className=" flex justify-between items-center py-2 xl:pr-24 flex-col sm:flex-row">
-          <Link to="/" className="relative w-1/6 h-32 hidden sm:block">
-            <img
-              src={Logo}
-              alt="logo"
-              className="absolute w-full h-full object-contain"
-            />
+          <Link to="/" className="flex flex-col justify-center items-center">
+            <div className="relative w-[140px] h-28 hidden sm:block">
+              <img
+                src={Logo}
+                alt="logo"
+                className="absolute w-full h-full object-contain"
+              />
+            </div>
+            <h1 className="text-xl font-semibold text-redbrand">जय श्रमिक</h1>
           </Link>
           <div className="pr-0 xl:pr-16">
             <h1 className="uppercase text-xl sm:text-4xl text-center tracking-wider font-bold text-blue-900">
               socialist <span className="text-redbrand">trade union</span>{" "}
-              confederation
+              confederation (STUC)
             </h1>
             <h1 className="uppercase text-medium  sm:text-2xl tracking-wider font-medium text-blue-900 text-center hidden xl:block">
               समाजवादी ट्रेड युनियन महासंघ, नेपाल (केन्द्रीय समिति)
@@ -266,32 +268,50 @@ const Header = () => {
               >
                 <ul className="text-slate-900">
                   <Link to="/introduction">
-                    <li  onClick={() => handleActiveLink(1)} className="py-2 px-4 text-slate-700 hover:bg-offWhite">
+                    <li
+                      onClick={() => handleActiveLink(1)}
+                      className="py-2 px-4 text-slate-700 hover:bg-offWhite"
+                    >
                       Inroduction
                     </li>
                   </Link>
                   <Link to="/associate-organization">
-                    <li  onClick={() => handleActiveLink(1)} className="py-2 px-4 text-slate-700 hover:bg-offWhite">
+                    <li
+                      onClick={() => handleActiveLink(1)}
+                      className="py-2 px-4 text-slate-700 hover:bg-offWhite"
+                    >
                       Associate Organization
                     </li>
                   </Link>
                   <Link to="/board-of-directors">
-                    <li  onClick={() => handleActiveLink(1)} className="py-2 px-4 text-slate-700 hover:bg-offWhite">
+                    <li
+                      onClick={() => handleActiveLink(1)}
+                      className="py-2 px-4 text-slate-700 hover:bg-offWhite"
+                    >
                       Board of Directors
                     </li>
                   </Link>
                   <Link to="message-from-chairman">
-                    <li  onClick={() => handleActiveLink(1)} className="py-2 px-4 text-slate-700 hover:bg-offWhite">
+                    <li
+                      onClick={() => handleActiveLink(1)}
+                      className="py-2 px-4 text-slate-700 hover:bg-offWhite"
+                    >
                       Message from Chairman
                     </li>
                   </Link>
                   <Link to="message-from-secretary">
-                    <li  onClick={() => handleActiveLink(1)} className="py-2 px-4 text-slate-700 hover:bg-offWhite">
+                    <li
+                      onClick={() => handleActiveLink(1)}
+                      className="py-2 px-4 text-slate-700 hover:bg-offWhite"
+                    >
                       Message from Secretary
                     </li>
                   </Link>
                   <Link to="bidhan">
-                    <li  onClick={() => handleActiveLink(1)} className="py-2 px-4 text-slate-700 hover:bg-offWhite">
+                    <li
+                      onClick={() => handleActiveLink(1)}
+                      className="py-2 px-4 text-slate-700 hover:bg-offWhite"
+                    >
                       Bidhans
                     </li>
                   </Link>
@@ -342,7 +362,6 @@ const Header = () => {
             } sm:text-sm`}
             onMouseEnter={() => setGallery(true)}
             onMouseLeave={() => setGallery(false)}
-           
           >
             Gallery
             {gallery && (
@@ -351,12 +370,18 @@ const Header = () => {
               >
                 <ul className="text-slate-900">
                   <Link to="/image-gallery">
-                    <li  onClick={() => handleActiveLink(6)} className="py-2 px-4 text-slate-700 hover:bg-offWhite">
+                    <li
+                      onClick={() => handleActiveLink(6)}
+                      className="py-2 px-4 text-slate-700 hover:bg-offWhite"
+                    >
                       Image Gallery
                     </li>
                   </Link>
                   <Link to="/video-gallery">
-                    <li  onClick={() => handleActiveLink(6)} className="py-2 px-4 text-slate-700 hover:bg-offWhite">
+                    <li
+                      onClick={() => handleActiveLink(6)}
+                      className="py-2 px-4 text-slate-700 hover:bg-offWhite"
+                    >
                       Video Gallery
                     </li>
                   </Link>
