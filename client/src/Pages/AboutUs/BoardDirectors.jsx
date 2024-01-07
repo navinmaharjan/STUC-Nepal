@@ -56,6 +56,23 @@ const History = () => {
                 </div>
               ))}
             </div>
+            <div className="mx-auto">
+              {BoardDirectors.slice(0, 1).map((item) => (
+                <div className="flex flex-col justify-center items-center">
+                  <div className="relative w-40 h-40 rounded-full overflow-hidden">
+                    <img
+                      src={item.boardMemberImage}
+                      alt=""
+                      className="absolute w-full h-full object-cover"
+                    />
+                  </div>
+                  <p className="text-xl font-semibold text-redbrand">
+                    {item.boardDesignation}
+                  </p>
+                  <p className="text-lg font-medium">{item.boardMemberName}</p>
+                </div>
+              ))}
+            </div>
             <div className="grid gap-8 sm:first-letter:py-14 xl:grid-cols-4 md:grid-cols-2">
               {BoardDirectors.slice(5, 36).map((item) => (
                 <div className="flex flex-col justify-center items-center bg-white py-2">
